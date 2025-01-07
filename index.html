@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Nav Images with Toggle Sections</title>
+    <style>
+
+        body {
+            background-color: orange;
+            padding-top: 60px;
+        }
+
+        .rank-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);  /* Create 4 equal-width columns */
+            gap: 0px;                              /* Space between items */
+            padding: 0px;                          /* Padding around the container */
+            justify-items: center;                  /* Center the items horizontally */
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .rank-item {
+            text-align: center;          /* Center the text inside the nav */
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .rank-item img {
+            width: 150px;
+            height: 150px;
+            transition: opacity 0.3s ease; /* Smooth hover effect */
+        }
+
+        .rank-item:hover img {
+            opacity: 0.8;  /* Optional hover effect */
+        }
+
+        .rank-item span {
+            display: block;              /* Make the text appear below the image */
+            font-size: 18px;             /* Font size for the text */
+            color: black;                /* Default text color */
+            font-family: 'Roboto', sans-serif; /* 'Roboto' font for the text */
+            font-weight: 700;            /* Make the text bold */
+            transition: color 0.3s;      /* Smooth transition for color change */
+            position: relative;
+            left: 175px;
+            top: -125px;
+        }
+
+        .rank-item:hover span {
+            color: red;                  /* Text turns red on hover */
+        }
+
+        /* Basic styling for the navigation bar */
+        .nav-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);  /* Create 4 equal-width columns */
+            gap: 20px;                              /* Space between items */
+            padding: 20px;                          /* Padding around the container */
+            justify-items: center;                  /* Center the items horizontally */
+            display: none;                          /* Hide the nav bar by default */
+            position: relative;
+            top: 50px;
+        }
+
+        .nav-item {
+            text-align: center;          /* Center the text inside the nav */
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .nav-item img {
+            width: 100px;
+            height: 100px;
+            transition: opacity 0.3s ease; /* Smooth hover effect */
+        }
+
+        .nav-item:hover img {
+            opacity: 0.8;  /* Optional hover effect */
+        }
+
+        /* General font for all sections */
+        section {
+            font-family: 'Arial', sans-serif; /* General font for the content */
+            font-size: 16px;                  /* Font size for the content */
+            color: #333;                      /* Dark color for text */
+            line-height: 1.6;                 /* Line height for readability */
+            display: none;                    /* Hide sections by default */
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ddd;
+        }
+
+        section h2 {
+            font-family: 'Roboto', sans-serif; /* Font for headings */
+            font-size: 24px;                   /* Font size for headings */
+            color: #333;                       /* Dark color for headings */
+            font-weight: 700;                  /* Bold weight for headings */
+        }
+
+        section score {
+            font-family: 'Roboto', sans-serif; /* Font for headings */
+            font-size: 40px;                   /* Font size for headings */
+            color: #333;                       /* Dark color for headings */
+            font-weight: 700;                  /* Bold weight for headings */
+            position: relative;  /* Position it relative to its normal position */
+            left: 300px; 
+            top: -180px;
+        }
+
+        .section-content {
+            display: flex;
+            justify-content: center;  /* Centers horizontally */
+            align-items: center;      /* Centers vertically */
+            flex-direction: column;   /* Ensure button is below any other content */
+            margin: 0 auto; /* Centers content horizontally */
+        }
+
+        .section-content img {
+            width: 300px;
+            height: 300px;
+            display: block;  /* Ensures block-level elements */
+            margin: 0 auto;  /* Centers image */
+        }
+
+        .section-content div {
+            display: flex;
+            justify-content: center; /* Centers elements horizontally */
+            align-items: center;     /* Centers elements vertically */
+        }
+
+        .nav-item span {
+            display: block;              /* Make the text appear below the image */
+            font-size: 18px;             /* Font size for the text */
+            color: black;                /* Default text color */
+            margin-top: 5px;             /* Space between image and text */
+            font-family: 'Roboto', sans-serif; /* 'Roboto' font for the text */
+            font-weight: 700;            /* Make the text bold */
+            transition: color 0.3s;      /* Smooth transition for color change */
+        }
+
+        .nav-item:hover span {
+            color: red;                  /* Text turns red on hover */
+        }
+
+        a {
+            text-decoration: none;       /* Remove underline from links */
+        }
+
+        /* Button Styling */
+        .button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #1d5e8a;
+        }
+
+        .top-bar {
+            background-color: black;           /* Black background */
+            color: white;                      /* White text */
+            padding: 10px 20px;                /* Padding for spacing */
+            display: flex;                     /* Use Flexbox to position elements */
+            justify-content: space-between;    /* Space out the content (back button on the left) */
+            align-items: center;               /* Vertically center the content */
+            position: fixed;                   /* Fix the bar at the top */
+            width: 100%;                        /* Stretch across the entire width */
+            top: 0;                            /* Stick it to the top of the page */
+            left: 0;                           /* Align it to the left */
+            z-index: 1000;                     /* Ensure the bar is on top of other elements */
+        }
+
+        /* Back button styling inside the top bar */
+        .top-bar .home-button {
+            background-color: black;          /* Black background */
+            color: white;                     /* White text */
+            border: 1px solid white;          /* White border */
+            padding: 10px 20px;                /* Padding around the button */
+            font-size: 16px;                   /* Font size for the button */
+            cursor: pointer;                  /* Pointer cursor on hover */
+        }
+        
+
+        /* Hover effect for the back button */
+        .top-bar .home-button:hover {
+            background-color: #1d5e8a;        /* Change background color on hover */
+        }
+
+        /* Back button styling inside the top bar */
+        .top-bar .nav-button {
+            background-color: black;          /* Black background */
+            color: white;                     /* White text */
+            border: 1px solid white;          /* White border */
+            padding: 10px 20px;                /* Padding around the button */
+            font-size: 16px;                   /* Font size for the button */
+            cursor: pointer;                  /* Pointer cursor on hover */
+            position: relative;
+            left: -800px;
+        }
+        
+
+        /* Hover effect for the back button */
+        .top-bar .nav-button:hover {
+            background-color: #1d5e8a;        /* Change background color on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <button class="home-button" onclick="goToHome()">Top 100</button>
+        <button class="nav-button" onclick="goToNavbar()">Reviews</button>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="rank-container">
+            <h2>My top 100 albums</h2>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Animals')">
+                    <img src="Animals.png" alt="Animals">
+                    <span>Animals<br>Pink Floyd<br>1977</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('BornToRun')">
+                    <img src="BornToRun.png" alt="BornToRun">
+                    <span>Born To Run<br>Bruce Springsteen<br>1975</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('AbbeyRoad')">
+                    <img src="Abbey.png" alt="Abbey">
+                    <span>Abbey Road<br>The Beatles<br>1969</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('BonIver')">
+                    <img src="BonIver.png" alt="BonIver">
+                    <span>Bon Iver, Bon Iver<br>Bon Iver<br>2011</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('BRAT')">
+                    <img src="BRAT.png" alt="BRAT">
+                    <span>BRAT<br>Charli XCX<br>2024</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Agaetis')">
+                    <img src="Agaetis.png" alt="Wutang">
+                    <span>Ágætis byrjun<br>Sigur Rós<br>1999</span>
+                </a>
+            </div>
+            <button class="See all reviews" onclick="goToNavbar()">Go to Navbar</button>
+        </div>
+    </section>
+
+    <!-- Navigation bar with clickable images -->
+    <div class="nav-container">
+        <div class="nav-item">
+            <a href="#" onclick="showSection('AbbeyRoad')">
+                <img src="Abbey.png" alt="Abbey">
+                <span>Abbey Road<br>The Beatles<br>1969</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Agaetis')">
+                <img src="Agaetis.png" alt="Wutang">
+                <span>Ágætis byrjun<br>Sigur Rós<br>1999</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Animals')">
+                <img src="Animals.png" alt="Animals">
+                <span>Animals<br>Pink Floyd<br>1977</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('BonIver')">
+                <img src="BonIver.png" alt="BonIver">
+                <span>Bon Iver, Bon Iver<br>Bon Iver<br>2011</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('BornToRun')">
+                <img src="BornToRun.png" alt="BornToRun">
+                <span>Born To Run<br>Bruce Springsteen<br>1975</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('BRAT')">
+                <img src="BRAT.png" alt="BRAT">
+                <span>BRAT<br>Charli XCX<br>2024</span>
+            </a>
+        </div>
+        <button class="button" onclick="goToHome()">Back to Home</button>
+    </div>
+
+    <!-- Sections -->
+    <section id="Agaetis">
+        <div class="section-content">
+            <h2>Ágætis byrjun</h2>
+            <p>Dreamy, Ambient, Orchestral</p>
+            <p>Favourite songs: Ágætis byrjun, Ný batterí, Olsen olsen</p>
+            <img src="Agaetis.png" alt="Agaetis Image">
+            <score>9.2/10</score>
+            <p>This is clearly a great and beautiful album sonically, I just cannot score it higher because I do not find myself listening to it often.</p>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+        </div>
+    </section>
+
+    <section id="AbbeyRoad">
+        <div class="section-content">
+            <h2>Abbey Road</h2>
+            <p>Rock, Pop, Classic</p>
+            <p>Favourite songs: The End, Oh! Darling, Here comes the sun</p>
+            <img src="Abbey.png" alt="Abbey Image">
+            <score>9.4/10</score>
+            <p>I find that my generation dismisses this album without a proper appreciation for it. Unfortunately, this IS a great album. This album is split into two halves, the first, unorganised section and the medley. I think that the medley is better than the first section. The medley starts slow at "Because", and progressively gets more rock 'n' roll (and better), until the end.</p>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+        </div>
+    </section>
+
+    <section id="Animals">
+        <div class="section-content">
+            <h2>Animals</h2>
+            <p>Prog rock, Political, Epic guitar</p>
+            <p>Favourite songs: Dogs, Pigs, Sheep</p>
+            <img src="Animals.png" alt="Animals Image">
+            <score>10/10</score>
+            <p>Three songs. Three of the best guitar solos ever.</p>
+            <p>Animals is based on George Orwell's Animal Farm, and the three songs represent three of the main characters in Animal Farm. The Pigs represent dictators who utilise dogs to rise to power over the sheep. Each song is long (over 10 minutes) and each culminate in an epic guitar solo near the end of the song. Sheep is one of my all-time favourite songs.</p>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+        </div>
+    </section>
+
+    <section id="BornToRun">
+        <div class="section-content">
+            <h2>Born To Run</h2>
+            <p>Hyperpop, Club, Slay</p>
+            <p>Favourite songs: Von Dutch, Apple, Rewind</p>
+            <img src="BornToRun.png" alt="BornToRun Image">
+            <score>9.8/10</score>
+            <p></p>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+        </div>
+    </section>
+
+    <section id="BonIver">
+        <div class="section-content">
+            <h2>Bon Iver, Bon Iver</h2>
+            <p>Hyperpop, Club, Slay</p>
+            <p>Favourite songs: Von Dutch, Apple, Rewind</p>
+            <img src="BonIver.png" alt="BonIver Image">
+            <score>9.3/10</score>
+            <p></p>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+        </div>
+    </section>
+
+    <section id="BRAT">
+        <div class="section-content">
+            <h2>BRAT</h2>
+            <p>Hyperpop, Club, Slay</p>
+            <p>Favourite songs: Von Dutch, Apple, Rewind</p>
+            <img src="BRAT.png" alt="BRAT Image">
+            <score>9.3/10</score>
+            <p>One of the best pop albums released in a long time. Experimental and maximalist. Everyone likes BRAT, but why does this album have to have slow songs?? Why can't she just slay...</p>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Services Section</h2>
+        <p>This is the services section content.</p>
+        <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Section</h2>
+        <p>This is the contact section content.</p>
+        <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <script>
+        // Show specific section and hide others
+        function showSection(sectionId) {
+            document.querySelector('.nav-container').style.display = 'none';
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) selectedSection.style.display = 'block';
+
+            // Show nav bar on 'contact' section
+            if (sectionId === 'contact') {
+                document.querySelector('.nav-container').style.display = 'grid';
+            }
+        }
+
+        // Go back to the navigation bar
+        function goBack() {
+            document.querySelector('.nav-container').style.display = 'grid';
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+
+        // Go to the navbar from home
+        function goToNavbar() {
+            document.querySelector('.nav-container').style.display = 'grid';
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+
+        // Go back to the home section
+        function goToHome() {
+            document.querySelector('.nav-container').style.display = 'none';
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const homeSection = document.getElementById('home');
+            if (homeSection) homeSection.style.display = 'block';
+        }
+
+        // Initially, show the home section
+        showSection('home');
+    </script>
+
+</body>
+
+</html>

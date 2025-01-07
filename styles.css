@@ -1,0 +1,27 @@
+/* Style for the grid container */
+.nav-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Create 4 equal-width columns */
+    gap: 20px;        /* Space between items */
+    padding: 20px;    /* Padding around the container */
+    justify-items: center;  /* Center the items horizontally */
+}
+
+/* Style for each nav item */
+nav {
+    text-align: center;          /* Center the text inside the nav */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px;        /* Font size for the links */
+    padding: 10px;          /* Padding inside the link */
+    display: inline-block;  /* Make the link behave like a block */
+    color: black;           /* Text color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the nav links */
+nav a:hover {
+    color: #3498db; /* Change color when hovered */
+}

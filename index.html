@@ -102,10 +102,9 @@
         }
 
         section score {
-            font-family: 'Roboto', sans-serif; /* Font for headings */
-            font-size: 40px;                   /* Font size for headings */
-            color: #333;                       /* Dark color for headings */
-            font-weight: 700;                  /* Bold weight for headings */
+            width: 300px;
+            height: 300px;
+            display: block;  /* Ensures block-level elements */
             position: relative;  /* Position it relative to its normal position */
             left: 300px; 
             top: -180px;
@@ -312,10 +311,8 @@
         <div class="section-content">
             <h2>Ágætis byrjun</h2>
             <p>Dreamy, Ambient, Orchestral</p>
-            <p>Favourite songs: Ágætis byrjun, Ný batterí, Olsen olsen</p>
             <img src="Agaetis.png" alt="Agaetis Image">
-            <score>9.2/10</score>
-            <p>This is clearly a great and beautiful album sonically, I just cannot score it higher because I do not find myself listening to it often.</p>
+            <score>src="Agaetis.png" alt="Agaetis Image"</score>
             <button class="button" onclick="goBack()">Back to Navigation</button>
         </div>
     </section>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickable Nav Images with Toggle Sections</title>
+    <title>Epic music website</title>
     <style>
 
         body {
@@ -41,17 +41,17 @@
         .rank-item span {
             display: block;              /* Make the text appear below the image */
             font-size: 18px;             /* Font size for the text */
-            color: black;                /* Default text color */
+            color: white;                /* Default text color */
             font-family: 'Roboto', sans-serif; /* 'Roboto' font for the text */
             font-weight: 700;            /* Make the text bold */
             transition: color 0.3s;      /* Smooth transition for color change */
             position: relative;
-            left: 175px;
+            left: 280px;
             top: -125px;
         }
 
         .rank-item:hover span {
-            color: red;                  /* Text turns red on hover */
+            color: #8a1d52;                  /* Text turns red on hover */
         }
 
         /* Basic styling for the navigation bar */
@@ -86,25 +86,26 @@
         section {
             font-family: 'Arial', sans-serif; /* General font for the content */
             font-size: 16px;                  /* Font size for the content */
-            color: #333;                      /* Dark color for text */
+            color: white;                      /* Dark color for text */
             line-height: 1.6;                 /* Line height for readability */
             display: none;                    /* Hide sections by default */
-            padding: 5px;
-            margin: 5px;
+            padding: 2px;
+            margin: 2px;
             border: 1px solid #ddd;
         }
 
         section h2 {
             font-family: 'Roboto', sans-serif; /* Font for headings */
             font-size: 24px;                   /* Font size for headings */
-            color: #333;                       /* Dark color for headings */
+            color: white;                       /* Dark color for headings */
             font-weight: 700;                  /* Bold weight for headings */
         }
 
         section score {
-            width: 300px;
-            height: 300px;
-            display: block;  /* Ensures block-level elements */
+            font-family: 'Roboto', sans-serif; /* Font for headings */
+            font-size: 40px;                   /* Font size for headings */
+            color: #333;                       /* Dark color for headings */
+            font-weight: 700;                  /* Bold weight for headings */
             position: relative;  /* Position it relative to its normal position */
             left: 300px; 
             top: -180px;
@@ -118,11 +119,30 @@
             margin: 0 auto; /* Centers content horizontally */
         }
 
-        .section-content img {
-            width: 300px;
-            height: 300px;
-            display: block;  /* Ensures block-level elements */
-            margin: 0 auto;  /* Centers image */
+        .section-content > img{
+            width:210px;
+            height:210px;
+            display:block;
+            margin:0 auto;
+            object-fit:cover;           /* will crop‑fill instead of stretching */
+        }
+
+        .album-title{
+            width:100%;          /* let the heading span the full column width   */
+            text-align:center;   /* centre each line within that full width      */
+            margin:0;            /* (optional) remove default top/bottom margins */
+        }
+
+        .score{
+            display:flex;               /* show stars in a row */
+            gap:0.35rem;                /* little breathing‑room between icons */
+            margin-top:1rem;            /* space above row of stars */
+        }
+
+        /* shrink stars (or digit images) to suit */
+        .score img{
+            width:100px;
+            height:100px;                /* keep a square aspect ratio */
         }
 
         .section-content div {
@@ -134,7 +154,7 @@
         .nav-item span {
             display: block;              /* Make the text appear below the image */
             font-size: 18px;             /* Font size for the text */
-            color: black;                /* Default text color */
+            color: white;                /* Default text color */
             margin-top: 5px;             /* Space between image and text */
             font-family: 'Roboto', sans-serif; /* 'Roboto' font for the text */
             font-weight: 700;            /* Make the text bold */
@@ -142,7 +162,7 @@
         }
 
         .nav-item:hover span {
-            color: red;                  /* Text turns red on hover */
+            color: #8a1d52;                  /* Text turns red on hover */
         }
 
         a {
@@ -151,7 +171,7 @@
 
         /* Button Styling */
         .button {
-            padding: 10px 20px;
+            padding: 10px 10px;
             background-color: black;
             color: white;
             border: none;
@@ -161,7 +181,7 @@
         }
 
         .button:hover {
-            background-color: #1d5e8a;
+            background-color: #8a1d52;
         }
 
         .top-bar {
@@ -186,12 +206,31 @@
             padding: 10px 20px;                /* Padding around the button */
             font-size: 16px;                   /* Font size for the button */
             cursor: pointer;                  /* Pointer cursor on hover */
+            position: relative;
+            left: -400px;
         }
         
 
         /* Hover effect for the back button */
         .top-bar .home-button:hover {
-            background-color: #1d5e8a;        /* Change background color on hover */
+            background-color: #8a1d52;        /* Change background color on hover */
+        }
+
+        .top-bar .home-button2 {
+            background-color: black;          /* Black background */
+            color: white;                     /* White text */
+            border: 1px solid white;          /* White border */
+            padding: 10px 20px;                /* Padding around the button */
+            font-size: 16px;                   /* Font size for the button */
+            cursor: pointer;                  /* Pointer cursor on hover */
+            position: relative;
+            left: -800px;
+        }
+        
+
+        /* Hover effect for the back button */
+        .top-bar .home-button2:hover {
+            background-color: #8a1d52;        /* Change background color on hover */
         }
 
         /* Back button styling inside the top bar */
@@ -202,14 +241,12 @@
             padding: 10px 20px;                /* Padding around the button */
             font-size: 16px;                   /* Font size for the button */
             cursor: pointer;                  /* Pointer cursor on hover */
-            position: relative;
-            left: -825px;
         }
         
 
         /* Hover effect for the back button */
         .top-bar .nav-button:hover {
-            background-color: #1d5e8a;        /* Change background color on hover */
+            background-color: #8a1d52;        /* Change background color on hover */
         }
     </style>
 </head>
@@ -217,14 +254,74 @@
 <body>
 
     <div class="top-bar">
-        <button class="home-button" onclick="goToHome()">Top 100</button>
-        <button class="nav-button" onclick="goToNavbar()">Reviews</button>
+        <button class="nav-button" onclick="goToWelcome()">Home</button>
+        <button class="home-button" onclick="goToNavbar()">Reviews</button>
+        <button class="home-button2" onclick="goToHome()">RobKnife's Top 100</button>
     </div>
+
+    <section id="welcome" class="section">
+        <h1>Epic music website recording the reviews of Rob "RobKnife" Smith and Peter "PetyaSpoon" Havacs!</h1>
+        <img src="RobKnife.png" alt="Wutang">
+        <img src="PetyaSpoon.png" alt="Wutang">
+        <h1>We rank based on the following 7 categories:<br>Perfetto!: A 10/10 album<br>Delish: One of our favourite albums<br>Yum: Banger album<br>Snack: Enjoyable album<br>K.: We feel indifferent to this album<br>Eww: We dislike this album<br>BLEH: We hate this album</h1>
+        <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+            <img src="Perfetto.png" alt="Wutang">
+            <img src="DELISH.png" alt="Wutang">
+            <img src="YUM.png" alt="Wutang">
+            <img src="Snack.png" alt="Wutang">
+            <img src="K.png" alt="Wutang">
+            <img src="Eww.png" alt="Wutang">
+            <img src="BLEH.png" alt="Wutang">
+        </div>
+    </section>
 
     <!-- Home Section -->
     <section id="home">
         <div class="rank-container">
-            <h2>My top 100 albums</h2>
+            <h2>RobKnife's top 100 albums</h2>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('YHF')">
+                    <img src="YHF.png" alt="YHF">
+                    <span>Yankee Hotel Foxtrot<br>Wilco<br>2003</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('PublicEnemy')">
+                    <img src="PublicEnemy.png" alt="YHF">
+                    <span>It Takes A Nation Of Millions To Hold Us Back<br>Public Enemy<br>1988</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('FetchBoltCutters')">
+                    <img src="FetchBoltCutters.png" alt="FetchBoltCutters">
+                    <span>Fetch The Bolt Cutters<br>Fiona Apple<br>2020</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Odelay')">
+                    <img src="Odelay.png" alt="Odelay">
+                    <span>Odelay<br>Beck<br>1996</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Doolittle')">
+                    <img src="Doolittle.png" alt="Doolittle">
+                    <span>Doolittle<br>Pixies<br>1989</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('SoftBulletin')">
+                    <img src="SoftBulletin.png" alt="SoftBulletin">
+                    <span>The Soft Bulletin<br>The Flaming Lips<br>1999</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('MPP')">
+                    <img src="MPP.png" alt="MPP">
+                    <span>Merriweather Post Pavilion<br>Animal Collective<br>2009</span>
+                </a>
+            </div>
             <div class="rank-item">
                 <a href="#" onclick="showSection('Animals')">
                     <img src="Animals.png" alt="Animals">
@@ -235,6 +332,24 @@
                 <a href="#" onclick="showSection('BornToRun')">
                     <img src="BornToRun.png" alt="BornToRun">
                     <span>Born To Run<br>Bruce Springsteen<br>1975</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Grace')">
+                    <img src="Grace.png" alt="Grace">
+                    <span>Grace<br>Jeff Buckley<br>1994</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('EitherOr')">
+                    <img src="EitherOr.png" alt="EitherOr">
+                    <span>Either/Or<br>Elliott Smith<br>1997</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('GoldenHour')">
+                    <img src="GoldenHour.png" alt="GoldenHour">
+                    <span>Golden Hour<br>Kacey Musgraves<br>2018</span>
                 </a>
             </div>
             <div class="rank-item">
@@ -261,7 +376,7 @@
                     <span>Ágætis byrjun<br>Sigur Rós<br>1999</span>
                 </a>
             </div>
-            <button class="See all reviews" onclick="goToNavbar()">Go to Navbar</button>
+            <button class="button" onclick="goBack()">See all reviews</button>
         </div>
     </section>
 
@@ -286,6 +401,12 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('SadBoy')">
+                <img src="SadBoy.png" alt="BonIver">
+                <span>Best Day Of My Life<br>Tom Odell<br>2022</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('BonIver')">
                 <img src="BonIver.png" alt="BonIver">
                 <span>Bon Iver, Bon Iver<br>Bon Iver<br>2011</span>
@@ -303,8 +424,80 @@
                 <span>BRAT<br>Charli XCX<br>2024</span>
             </a>
         </div>
-        <button class="button" onclick="goToHome()">Back to Home</button>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Doolittle')">
+                <img src="Doolittle.png" alt="Doolittle">
+                <span>Doolittle<br>Pixies<br>1989</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('EitherOr')">
+                <img src="EitherOr.png" alt="EitherOr">
+                <span>Either/Or<br>Elliott Smith<br>1997</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('FetchBoltCutters')">
+                <img src="FetchBoltCutters.png" alt="FetchBoltCutters">
+                <span>Fetch The Bolt Cutters<br>Fiona Apple<br>2020</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('GoldenHour')">
+                <img src="GoldenHour.png" alt="GoldenHour">
+                <span>Golden Hour<br>Kacey Musgraves<br>2018</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Grace')">
+                <img src="Grace.png" alt="Grace">
+                <span>Grace<br>Jeff Buckley<br>1994</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('PublicEnemy')">
+                <img src="PublicEnemy.png" alt="Grace">
+                <span>It Takes A Nation Of Millions To Hold Us Back<br>Public Enemy<br>1988</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Madvillainy')">
+                <img src="Madvillainy.png" alt="MPP">
+                <span>Madvillainy<br>Madvillain<br>2004</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('MPP')">
+                <img src="MPP.png" alt="MPP">
+                <span>Merriweather Post Pavilion<br>Animal Collective<br>2009</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Odelay')">
+                <img src="Odelay.png" alt="Odelay">
+                <span>Odelay<br>Beck<br>1996</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('SoftBulletin')">
+                <img src="SoftBulletin.png" alt="SoftBulletin">
+                <span>The Soft Bulletin<br>The Flaming Lips<br>1999</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('SongsKeyLife')">
+                <img src="SongsKeyLife.png" alt="SoftBulletin">
+                <span>Songs In The Key Of Life<br>Stevie Wonder<br>1976</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('YHF')">
+                <img src="YHF.png" alt="YHF">
+                <span>Yankee Hotel Foxtrot<br>Wilco<br>2003</span>
+            </a>
+        </div>
     </div>
+    
 
     <!-- Sections -->
     <section id="Agaetis">
@@ -312,70 +505,383 @@
             <h2>Ágætis byrjun</h2>
             <p>Dreamy, Ambient, Orchestral</p>
             <img src="Agaetis.png" alt="Agaetis Image">
-            <score src="Agaetis.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Snack.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
             <button class="button" onclick="goBack()">Back to Navigation</button>
         </div>
     </section>
 
     <section id="AbbeyRoad">
         <div class="section-content">
-            <h2>Abbey Road</h2>
+            <h2 class="album-title">
+                Abbey Road<br>
+                The Beatles
+            </h2>
             <p>Rock, Pop, Classic</p>
-            <p>Favourite songs: The End, Oh! Darling, Here comes the sun</p>
-            <img src="Abbey.png" alt="Abbey Image">
-            <score>9.4/10</score>
-            <p>I find that my generation dismisses this album without a proper appreciation for it. Unfortunately, this IS a great album. This album is split into two halves, the first, unorganised section and the medley. I think that the medley is better than the first section. The medley starts slow at "Because", and progressively gets more rock 'n' roll (and better), until the end.</p>
+            <img src="Abbey.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
             <button class="button" onclick="goBack()">Back to Navigation</button>
-        </div>
     </section>
 
     <section id="Animals">
         <div class="section-content">
-            <h2>Animals</h2>
-            <p>Prog rock, Political, Epic guitar</p>
-            <p>Favourite songs: Dogs, Pigs, Sheep</p>
-            <img src="Animals.png" alt="Animals Image">
-            <score>10/10</score>
-            <p>Three songs. Three of the best guitar solos ever.</p>
-            <p>Animals is based on George Orwell's Animal Farm, and the three songs represent three of the main characters in Animal Farm. The Pigs represent dictators who utilise dogs to rise to power over the sheep. Each song is long (over 10 minutes) and each culminate in an epic guitar solo near the end of the song. Sheep is one of my all-time favourite songs.</p>
+            <h2 class="album-title">
+                Animals<br>
+                Pink Floyd
+            </h2>
+            <p>Prog Rock, Political, Epic Guitar</p>
+            <img src="Animals.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
             <button class="button" onclick="goBack()">Back to Navigation</button>
-        </div>
+    </section>
+
+    <section id="SadBoy">
+        <div class="section-content">
+            <h2 class="album-title">
+                Best Day Of My Life<br>
+                Tom Odell
+            </h2>
+            <p>Sad boy sings about being sad</p>
+            <img src="SadBoy.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="BLEH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
     </section>
 
     <section id="BornToRun">
         <div class="section-content">
-            <h2>Born To Run</h2>
-            <p>Hyperpop, Club, Slay</p>
-            <p>Favourite songs: Von Dutch, Apple, Rewind</p>
-            <img src="BornToRun.png" alt="BornToRun Image">
-            <score>9.8/10</score>
-            <p></p>
+            <h2 class="album-title">
+                Born To Run<br>
+                Bruce Springsteen
+            </h2>
+            <p>AMERICA FUCK YEAH</p>
+            <img src="BornToRun.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
             <button class="button" onclick="goBack()">Back to Navigation</button>
-        </div>
     </section>
 
     <section id="BonIver">
         <div class="section-content">
-            <h2>Bon Iver, Bon Iver</h2>
-            <p>Hyperpop, Club, Slay</p>
-            <p>Favourite songs: Von Dutch, Apple, Rewind</p>
-            <img src="BonIver.png" alt="BonIver Image">
-            <score>9.3/10</score>
-            <p></p>
+            <h2 class="album-title">
+                Bon Iver, Bon Iver<br>
+                Bon Iver
+            </h2>
+            <p>Sadge</p>
+            <img src="BonIver.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
             <button class="button" onclick="goBack()">Back to Navigation</button>
-        </div>
     </section>
 
     <section id="BRAT">
         <div class="section-content">
-            <h2>BRAT</h2>
+            <h2 class="album-title">
+                BRAT<br>
+                Charli XCX
+            </h2>
             <p>Hyperpop, Club, Slay</p>
-            <p>Favourite songs: Von Dutch, Apple, Rewind</p>
-            <img src="BRAT.png" alt="BRAT Image">
-            <score>9.3/10</score>
-            <p>One of the best pop albums released in a long time. Experimental and maximalist. Everyone likes BRAT, but why does this album have to have slow songs?? Why can't she just slay...</p>
+            <img src="BRAT.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="Doolittle">
+        <div class="section-content">
+            <h2 class="album-title">
+                Doolittle<br>
+                Pixies
+            </h2>
+            <p>Punk, Rock</p>
+            <img src="Doolittle.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="EitherOr">
+        <div class="section-content">
+            <h2 class="album-title">
+                Either/Or<br>
+                Elliott Smith
+            </h2>
+            <p>Indie, Rock, Americana</p>
+            <img src="EitherOr.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="FetchBoltCutters">
+        <div class="section-content">
+            <h2 class="album-title">
+                Fetch The Bolt Cutters<br>
+                Fiona Apple
+            </h2>
+            <p>Experimental, Pop, Aggresive</p>
+            <img src="FetchBoltCutters.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="GoldenHour">
+        <div class="section-content">
+            <h2 class="album-title">
+                Golden Hour<br>
+                Kacey Musgraves
+            </h2>
+            <p>Avant-garde, Psychedelic, Electronic</p>
+            <img src="GoldenHour.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="Grace">
+        <div class="section-content">
+            <h2 class="album-title">
+                Grace<br>
+                Jeff Buckley
+            </h2>
+            <p>Rock</p>
+            <img src="Grace.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="PublicEnemy">
+        <div class="section-content">
+            <h2 class="album-title">
+                It Takes A Nation Of Millions To Hold Us Back<br>
+                Public Enemy, 1988
+            </h2>
+            <p>Experimental hip-hop</p>
+            <img src="PublicEnemy.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="Madvillainy">
+        <div class="section-content">
+            <h2 class="album-title">
+                Madvillainy<br>
+                Madvillain, 2004
+            </h2>
+            <p>Hip-hop album by hip-hop supergroup MF DOOM and Madlib</p>
+            <img src="Madvillainy.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
             <button class="button" onclick="goBack()">Back to Navigation</button>
         </div>
+    </section>
+    <section id="MPP">
+        <div class="section-content">
+            <h2 class="album-title">
+                Merriweather Post Pavilion<br>
+                Animal Collective
+            </h2>
+            <p>Avant-garde, Psychedelic, Electronic</p>
+            <img src="MPP.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+        </div>
+    </section>
+
+    <section id="Odelay">
+        <div class="section-content">
+            <h2 class="album-title">
+                Odelay<br>
+                Beck
+            </h2>
+            <p>Folk, Rock, Experimental</p>
+            <img src="Odelay.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="SoftBulletin">
+        <div class="section-content">
+            <h2 class="album-title">
+                The Soft Bulletin<br>
+                Flaming Lips
+            </h2>
+            <p>Avant-garde, Psychedelic, Rock</p>
+            <img src="SoftBulletin.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="SongsKeyLife">
+        <div class="section-content">
+            <h2 class="album-title">
+                Songs In The Key Of Life<br>
+                Stevie Wonder, 1976
+            </h2>
+            <p>Funk, Soul</p>
+            <img src="SongsKeyLife.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
+    </section>
+
+    <section id="YHF">
+        <div class="section-content">
+            <h2 class="album-title">
+                Yankee Hotel Foxtrot<br>
+                Wilco
+            </h2>
+            <p>Art, Indie, Pop</p>
+            <img src="YHF.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Navigation</button>
     </section>
 
     <section id="services">
@@ -414,7 +920,9 @@
                 section.style.display = 'none';
             });
         }
-
+        function goToWelcome() {
+            showSection('welcome');
+        }
         // Go to the navbar from home
         function goToNavbar() {
             document.querySelector('.nav-container').style.display = 'grid';
@@ -435,7 +943,7 @@
         }
 
         // Initially, show the home section
-        showSection('home');
+        showSection('welcome');
     </script>
 
 </body>

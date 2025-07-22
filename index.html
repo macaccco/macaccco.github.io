@@ -188,7 +188,7 @@
             color: white;                      /* White text */
             padding: 0px 0px;                /* Padding for spacing */
             display: flex;                     /* Use Flexbox to position elements */
-            justify-content: space-between;    /* Space out the content (back button on the left) */
+            justify-content: flex-start;    /* Space out the content (back button on the left) */
             align-items: center;               /* Vertically center the content */
             position: fixed;                   /* Fix the bar at the top */
             width: 100%;                        /* Stretch across the entire width */
@@ -202,11 +202,11 @@
             background-color: black;          /* Black background */
             color: white;                     /* White text */
             border: 1px solid black;          /* White border */
-            padding: 10px 40px;                /* Padding around the button */
+            padding: 10px 20px;                /* Padding around the button */
             font-size: 16px;                   /* Font size for the button */
             cursor: pointer;                  /* Pointer cursor on hover */
             position: relative;
-            left: -390px;
+            left: 0px;
         }
         
 
@@ -219,11 +219,11 @@
             background-color: black;          /* Black background */
             color: white;                     /* White text */
             border: 1px solid black;          /* White border */
-            padding: 10px 40px;                /* Padding around the button */
+            padding: 10px 20px;                /* Padding around the button */
             font-size: 16px;                   /* Font size for the button */
             cursor: pointer;                  /* Pointer cursor on hover */
             position: relative;
-            left: -780px;
+            left: 0px;
         }
         
 
@@ -232,12 +232,29 @@
             background-color: #8a1d52;        /* Change background color on hover */
         }
 
+        .top-bar .home-button3 {
+            background-color: black;          /* Black background */
+            color: white;                     /* White text */
+            border: 1px solid black;          /* White border */
+            padding: 10px 20px;                /* Padding around the button */
+            font-size: 16px;                   /* Font size for the button */
+            cursor: pointer;                  /* Pointer cursor on hover */
+            position: relative;
+            left: 0px;
+        }
+        
+
+        /* Hover effect for the back button */
+        .top-bar .home-button3:hover {
+            background-color: #8a1d52;        /* Change background color on hover */
+        }
+
         /* Back button styling inside the top bar */
         .top-bar .nav-button {
             background-color: black;          /* Black background */
             color: white;                     /* White text */
             border: 1px solid black;          /* White border */
-            padding: 10px 40px;                /* Padding around the button */
+            padding: 10px 20px;                /* Padding around the button */
             font-size: 16px;                   /* Font size for the button */
             cursor: pointer;                  /* Pointer cursor on hover */
         }
@@ -256,6 +273,7 @@
         <button class="nav-button" onclick="goToWelcome()">Home</button>
         <button class="home-button" onclick="goToNavbar()">Reviews</button>
         <button class="home-button2" onclick="goToHome()">RobKnife's Top 100</button>
+        <button class="home-button3" onclick="goToJoint()">Joint Best Albums</button>
     </div>
 
     <section id="welcome" class="section">
@@ -274,7 +292,35 @@
             <img src="BLEH.png" alt="Wutang">
         </div>
     </section>
-
+    <section id="joint">
+        <div class="rank-container">
+            <h2>Combined Best Albums</h2>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('OKcomp')">
+                    <img src="OKcomp.png" alt="MPP">
+                    <span>OK Computer<br>Radiohead<br>1997</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Doolittle')">
+                    <img src="Doolittle.png" alt="Doolittle">
+                    <span>Doolittle<br>Pixies<br>1989</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('MPP')">
+                    <img src="MPP.png" alt="MPP">
+                    <span>Merriweather Post Pavilion<br>Animal Collective<br>2009</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('YHF')">
+                    <img src="YHF.png" alt="YHF">
+                    <span>Yankee Hotel Foxtrot<br>Wilco<br>2002</span>
+                </a>
+            </div>
+        </div>
+    </section>
     <!-- Home Section -->
     <section id="home">
         <div class="rank-container">
@@ -282,7 +328,7 @@
             <div class="rank-item">
                 <a href="#" onclick="showSection('YHF')">
                     <img src="YHF.png" alt="YHF">
-                    <span>Yankee Hotel Foxtrot<br>Wilco<br>2003</span>
+                    <span>Yankee Hotel Foxtrot<br>Wilco<br>2002</span>
                 </a>
             </div>
             <div class="rank-item">
@@ -1458,6 +1504,9 @@
         }
         function goToWelcome() {
             showSection('welcome');
+        }
+        function goToJoint() {
+            showSection('joint');
         }
         // Go to the navbar from home
         function goToNavbar() {

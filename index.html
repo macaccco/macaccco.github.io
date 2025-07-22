@@ -9,7 +9,7 @@
 
         body {
             background-color: #202123;
-            padding-top: 60px;
+            padding-top: 15px;
         }
 
         .rank-container {
@@ -19,7 +19,7 @@
             padding: 0px;                          /* Padding around the container */
             justify-items: center;                  /* Center the items horizontally */
             position: relative;
-            margin-top: 20px;
+            margin-top: 0px;
         }
 
         .rank-item {
@@ -42,7 +42,7 @@
             display: block;              /* Make the text appear below the image */
             font-size: 18px;             /* Font size for the text */
             color: white;                /* Default text color */
-            font-family: 'Roboto', sans-serif; /* 'Roboto' font for the text */
+            font-family: "Josefin Sans", sans-serif; /* 'Roboto' font for the text */
             font-weight: 700;            /* Make the text bold */
             transition: color 0.3s;      /* Smooth transition for color change */
             position: relative;
@@ -58,12 +58,12 @@
         .nav-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);  /* Create 4 equal-width columns */
-            gap: 20px;                              /* Space between items */
-            padding: 20px;                          /* Padding around the container */
+            gap: 15px;                              /* Space between items */
+            padding: 5px;                          /* Padding around the container */
             justify-items: center;                  /* Center the items horizontally */
             display: none;                          /* Hide the nav bar by default */
             position: relative;
-            top: 50px;
+            top: 20px;
         }
 
         .nav-item {
@@ -84,17 +84,24 @@
 
         /* General font for all sections */
         section {
-            font-family: 'Montserrat', sans-serif; /* General font for the content */
+            font-family: "Josefin Sans", sans-serif; /* General font for the content */
             font-size: 16px;                  /* Font size for the content */
             color: white;                      /* Dark color for text */
             line-height: 1.6;                 /* Line height for readability */
             display: none;                    /* Hide sections by default */
             padding: 2px;
-            margin: 2px;
+            margin: 10px;
         }
-
+        @font-face {
+            font-family: "AvantGardeGothic";
+            src: url("/fonts/avantgarde.woff2") format("woff2"),
+                url("/fonts/avantgarde.woff") format("woff");
+            font-weight: 300 700;         /* if you have multiple weights */
+            font-style: normal;
+            font-display: swap;           /* avoids invisible text on load */
+        }
         section h2 {
-            font-family: 'Montserrat', sans-serif; /* Font for headings */
+            font-family: "Josefin Sans", sans-serif; /* Font for headings */
             font-size: 24px;                   /* Font size for headings */
             color: white;                       /* Dark color for headings */
             font-weight: 700;                  /* Bold weight for headings */
@@ -154,8 +161,8 @@
             display: block;              /* Make the text appear below the image */
             font-size: 18px;             /* Font size for the text */
             color: white;                /* Default text color */
-            margin-top: 5px;             /* Space between image and text */
-            font-family: 'Montserrat', sans-serif; /* 'Roboto' font for the text */
+            margin-top: 0px;             /* Space between image and text */
+            font-family: "Josefin Sans", sans-serif; /* 'Roboto' font for the text */
             font-weight: 700;            /* Make the text bold */
             transition: color 0.3s;      /* Smooth transition for color change */
         }
@@ -280,7 +287,7 @@
         <h1>Epic music website recording the reviews of Rob "RobKnife" Smith and Peter "PetyaSpoon" Havacs!</h1>
         <img src="RobKnife.png" alt="Wutang">
         <img src="PetyaSpoon.png" alt="Wutang">
-        <h1>We rank based on the following 7 categories:<br>Perfetto!: A 10/10 album<br>Delish: One of our favourite albums<br>Yum: Banger album<br>Snack: Enjoyable album<br>K.: We feel indifferent to this album<br>Eww: We dislike this album<br>BLEH: We hate this album</h1>
+        <p>We rank based on the following 7 categories:<br>Perfetto!: A 10/10 album<br>Delish: One of our favourite albums<br>Yum: Banger album<br>Snack: Enjoyable album<br>K.: We feel indifferent to this album<br>Eww: We dislike this album<br>BLEH: We hate this album</p>
         <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="Perfetto.png" alt="Wutang">
@@ -298,25 +305,25 @@
             <div class="rank-item">
                 <a href="#" onclick="showSection('OKcomp')">
                     <img src="OKcomp.png" alt="MPP">
-                    <span>OK Computer<br>Radiohead<br>1997</span>
+                    <span>1. OK Computer<br>Radiohead<br>1997</span>
                 </a>
             </div>
             <div class="rank-item">
                 <a href="#" onclick="showSection('Doolittle')">
                     <img src="Doolittle.png" alt="Doolittle">
-                    <span>Doolittle<br>Pixies<br>1989</span>
+                    <span>2. Doolittle<br>Pixies<br>1989</span>
                 </a>
             </div>
             <div class="rank-item">
                 <a href="#" onclick="showSection('MPP')">
                     <img src="MPP.png" alt="MPP">
-                    <span>Merriweather Post Pavilion<br>Animal Collective<br>2009</span>
+                    <span>3. Merriweather Post Pavilion<br>Animal Collective<br>2009</span>
                 </a>
             </div>
             <div class="rank-item">
                 <a href="#" onclick="showSection('YHF')">
                     <img src="YHF.png" alt="YHF">
-                    <span>Yankee Hotel Foxtrot<br>Wilco<br>2002</span>
+                    <span>4. Yankee Hotel Foxtrot<br>Wilco<br>2002</span>
                 </a>
             </div>
         </div>
@@ -338,15 +345,21 @@
                 </a>
             </div>
             <div class="rank-item">
-                <a href="#" onclick="showSection('FetchBoltCutters')">
-                    <img src="FetchBoltCutters.png" alt="FetchBoltCutters">
-                    <span>Fetch The Bolt Cutters<br>Fiona Apple<br>2020</span>
+                <a href="#" onclick="showSection('SongsKeyLife')">
+                    <img src="SongsKeyLife.png" alt="YHF">
+                    <span>Songs In The Key Of Life<br>Stevie Wonder<br>1976</span>
                 </a>
             </div>
             <div class="rank-item">
-                <a href="#" onclick="showSection('Odelay')">
-                    <img src="Odelay.png" alt="Odelay">
-                    <span>Odelay<br>Beck<br>1996</span>
+                <a href="#" onclick="showSection('RemainLight')">
+                    <img src="RemainLight.png" alt="YHF">
+                    <span>Remain In Light<br>Talking Heads<br>1980</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('FetchBoltCutters')">
+                    <img src="FetchBoltCutters.png" alt="FetchBoltCutters">
+                    <span>Fetch The Bolt Cutters<br>Fiona Apple<br>2020</span>
                 </a>
             </div>
             <div class="rank-item">
@@ -356,9 +369,9 @@
                 </a>
             </div>
             <div class="rank-item">
-                <a href="#" onclick="showSection('SoftBulletin')">
-                    <img src="SoftBulletin.png" alt="SoftBulletin">
-                    <span>The Soft Bulletin<br>The Flaming Lips<br>1999</span>
+                <a href="#" onclick="showSection('OKcomp')">
+                    <img src="OKcomp.png" alt="YHF">
+                    <span>OK Computer<br>Radiohead<br>1997</span>
                 </a>
             </div>
             <div class="rank-item">
@@ -368,9 +381,75 @@
                 </a>
             </div>
             <div class="rank-item">
+                <a href="#" onclick="showSection('Odelay')">
+                    <img src="Odelay.png" alt="Odelay">
+                    <span>Odelay<br>Beck<br>1996</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('SoftBulletin')">
+                    <img src="SoftBulletin.png" alt="SoftBulletin">
+                    <span>The Soft Bulletin<br>The Flaming Lips<br>1999</span>
+                </a>
+            </div> 
+            <div class="rank-item">
+                <a href="#" onclick="showSection('MBDTF')">
+                    <img src="MBDTF.png" alt="YHF">
+                    <span>My Beautiful Dark Twisted Fantasy<br>Kanye West<br>2010</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('LowEnd')">
+                    <img src="LowTheory.png" alt="YHF">
+                    <span>The Low End Theory<br>A Tribe Called Quest<br>1991</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Heaven')">
+                    <img src="Heaven.png" alt="YHF">
+                    <span>Heaven Or Las Vegas<br>Cocteau Twins<br>1990</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Homo')">
+                    <img src="Homo.png" alt="Animals">
+                    <span>Homogenic<br>Björk<br>1997</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Post')">
+                    <img src="Post.png" alt="Animals">
+                    <span>Post<br>Björk<br>1995</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Wutang')">
+                    <img src="WuTang.png" alt="Animals">
+                    <span>Enter The Wu-Tang (36 Chambers)<br>Wu-Tang Clan<br>1993</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Since')">
+                    <img src="Since.png" alt="Animals">
+                    <span>Since I Left You<br>The Avalanches<br>2000</span>
+                </a>
+            </div>
+            <div class="rank-item">
                 <a href="#" onclick="showSection('Animals')">
                     <img src="Animals.png" alt="Animals">
                     <span>Animals<br>Pink Floyd<br>1977</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Aeroplane')">
+                    <img src="Aeroplane.png" alt="Animals">
+                    <span>In The Aeroplane Over The Sea<br>Neutral Milk Hotel<br>1998</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Funeral')">
+                    <img src="Funeral.png" alt="Animals">
+                    <span>Funeral<br>Arcade Fire<br>2004</span>
                 </a>
             </div>
             <div class="rank-item">
@@ -446,6 +525,12 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('Amy')">
+                <img src="Amy.png" alt="BonIver">
+                <span>Back To Black<br>Amy Winehouse<br>2006</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('Bends')">
                 <img src="Bends.png" alt="BonIver">
                 <span>The Bends<br>Radiohead<br>1995</span>
@@ -476,9 +561,21 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('ORANGE')">
+                <img src="ORANGE.png" alt="Doolittle">
+                <span>Channel Orange<br>Frank Ocean<br>2012</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('Currents')">
                 <img src="Currents.png" alt="Doolittle">
                 <span>Currents<br>Tame Impala<br>2015</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Discovery')">
+                <img src="Discovery.png" alt="Doolittle">
+                <span>Discovery<br>Daft Punk<br>2001</span>
             </a>
         </div>
         <div class="nav-item">
@@ -494,6 +591,18 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('Wutang')">
+                <img src="WuTang.png" alt="EitherOr">
+                <span>Enter The Wu-Tang (36 Chambers)<br>Wu-Tang Clan<br>1993</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Eusexua')">
+                <img src="Eusexua.png" alt="EitherOr">
+                <span>Eusexua<br>FKA Twigs<br>2025</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('FetchBoltCutters')">
                 <img src="FetchBoltCutters.png" alt="FetchBoltCutters">
                 <span>Fetch The Bolt Cutters<br>Fiona Apple<br>2020</span>
@@ -503,6 +612,12 @@
             <a href="#" onclick="showSection('Franz')">
                 <img src="Franz.png" alt="FetchBoltCutters">
                 <span>Franz Ferdinand<br>Franz Ferdinand<br>2004</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Funeral')">
+                <img src="Funeral.png" alt="FetchBoltCutters">
+                <span>Funeral<br>Arcade Fire<br>2004</span>
             </a>
         </div>
         <div class="nav-item">
@@ -524,15 +639,45 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('Homo')">
+                <img src="Homo.png" alt="Grace">
+                <span>Homogenic<br>Björk<br>1997</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('Illinois')">
                 <img src="Illinois.png" alt="Grace">
                 <span>Illinoise<br>Sufjan Stevens<br>2005</span>
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('Illmatic')">
+                <img src="illmatic.png" alt="Grace">
+                <span>Illmatic<br>Nas<br>1994</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('InRainbows')">
                 <img src="InRainbows.png" alt="Grace">
                 <span>In Rainbows<br>Radiohead<br>2007</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Aeroplane')">
+                <img src="Aeroplane.png" alt="Abbey">
+                <span>In The Aeroplane Over The Sea<br>Neutral Milk Hotel<br>1998</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('InWaves')">
+                <img src="InWaves.png" alt="Grace">
+                <span>In Waves<br>Jamie xx<br>2024</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('IsThisIt')">
+                <img src="IsThisIt.png" alt="Grace">
+                <span>Is This It<br>The Strokes<br>2001</span>
             </a>
         </div>
         <div class="nav-item">
@@ -545,6 +690,12 @@
             <a href="#" onclick="showSection('KidA')">
                 <img src="KidA.png" alt="Grace">
                 <span>Kid A<br>Radiohead<br>2000</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('LowEnd')">
+                <img src="LowTheory.png" alt="Grace">
+                <span>The Low End Theory<br>A Tribe Called Quest<br>1991</span>
             </a>
         </div>
         <div class="nav-item">
@@ -569,6 +720,12 @@
             <a href="#" onclick="showSection('MBDTF')">
                 <img src="MBDTF.png" alt="MPP">
                 <span>My Beautiful Dark Twisted Fantasy<br>Kanye West<br>2010</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('NFR')">
+                <img src="NFR.png" alt="MPP">
+                <span>Norman Fucking Rockwell<br>Lana Del Rey<br>2019</span>
             </a>
         </div>
         <div class="nav-item">
@@ -602,9 +759,27 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('DeadQueen')">
+                <img src="DeadQueen.png" alt="Odelay">
+                <span>The Queen Is Dead<br>The Smiths<br>1986</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('Reflektor')">
                 <img src="Reflektor.png" alt="SoftBulletin">
                 <span>Reflektor<br>Arcade Fire<br>2013</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('RemainLight')">
+                <img src="RemainLight.png" alt="SoftBulletin">
+                <span>Remain In Light<br>Talking Heads<br>1980</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#" onclick="showSection('Renaissance')">
+                <img src="Renaissance.png" alt="SoftBulletin">
+                <span>Renaissance<br>Beyoncé<br>2022</span>
             </a>
         </div>
         <div class="nav-item">
@@ -638,6 +813,12 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" onclick="showSection('StoneRoses')">
+                <img src="StoneRoses.png" alt="SoftBulletin">
+                <span>The Stone Roses<br>The Stone Roses<br>1989</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" onclick="showSection('Interpol')">
                 <img src="Interpol.png" alt="SoftBulletin">
                 <span>Turn On The Bright Lights<br>Interpol<br>2002</span>
@@ -668,18 +849,19 @@
     <section id="Agaetis">
         <div class="section-content">
             <h2>Ágætis byrjun</h2>
-            <p>Dreamy, Ambient, Orchestral</p>
+            <p>Post-Rock, Ambient, Orchestral</p>
             <img src="Agaetis.png" alt="Agaetis Image">
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="RobKnife.png"  alt="★"> 
-                <img src="Snack.png"  alt="★">
+                <img src="YUM.png"  alt="★">
             </div>
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
-                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="PetyaSpoon.png"  alt="★">
+                <img src="DELISH.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
     </section>
 
@@ -700,7 +882,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Animals">
@@ -720,7 +902,28 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Amy">
+        <div class="section-content">
+            <h2 class="album-title">
+                Back To Black<br>
+                Amy Winehouse, 2006
+            </h2>
+            <p>Pop, R&B, Reggae</p>
+            <img src="Amy.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Bends">
@@ -740,7 +943,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="SadBoy">
@@ -760,7 +963,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="BornToRun">
@@ -780,7 +983,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="BonIver">
@@ -800,7 +1003,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="BRAT">
@@ -821,7 +1024,27 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="ORANGE">
+        <div class="section-content">
+            <h2 class="album-title">
+                Channel Orange<br>
+                Frank Ocean, 2012
+            </h2>
+            <p>Alternative R&B, Soul</p>
+            <img src="ORANGE.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Currents">
@@ -842,7 +1065,28 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="DELISH.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Discovery">
+        <div class="section-content">
+            <h2 class="album-title">
+                Discovery<br>
+                Daft Punk, 2001
+            </h2>
+            <p>Disco, House</p>
+            <img src="Discovery.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Doolittle">
@@ -863,7 +1107,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="EitherOr">
@@ -884,7 +1128,48 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="YUM.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Wutang">
+        <div class="section-content">
+            <h2 class="album-title">
+                Enter The Wu-Tang (36 Chambers)<br>
+                Wu-Tang Clan, 1993
+            </h2>
+            <p>Hip-hop</p>
+            <img src="WuTang.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Eusexua">
+        <div class="section-content">
+            <h2 class="album-title">
+                Eusexua<br>
+                FKA Twigs, 2025
+            </h2>
+            <p>Indie, Rock, Americana</p>
+            <img src="Eusexua.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="FetchBoltCutters">
@@ -904,7 +1189,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Franz">
@@ -925,7 +1210,28 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="YUM.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Funeral">
+        <div class="section-content">
+            <h2 class="album-title">
+                Funeral<br>
+                Arcade Fire, 2004
+            </h2>
+            <p>Indie Rock, Art Rock</p>
+            <img src="Funeral.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="GoldenHour">
@@ -945,7 +1251,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Grace">
@@ -965,7 +1271,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Heaven">
@@ -985,7 +1291,28 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Homo">
+        <div class="section-content">
+            <h2 class="album-title">
+                Homogenic<br>
+                Björk, 1997
+            </h2>
+            <p>Art Pop, Trip Hop, Experimental</p>
+            <img src="Homo.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Illinois">
@@ -1005,7 +1332,27 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Illmatic">
+        <div class="section-content">
+            <h2 class="album-title">
+                Illmatic<br>
+                Nas, 1994
+            </h2>
+            <p>Hip-hop</p>
+            <img src="Illmatic.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="InRainbows">
@@ -1026,7 +1373,69 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="DELISH.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Aeroplane">
+        <div class="section-content">
+            <h2 class="album-title">
+                In The Aeroplane Over The Sea<br>
+                Neutral Milk Hotel, 1998
+            </h2>
+            <p>Folk Rock</p>
+            <img src="Aeroplane.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="InWaves">
+        <div class="section-content">
+            <h2 class="album-title">
+                In Waves<br>
+                Jamie xx, 2024
+            </h2>
+            <p>Dance, Electronic</p>
+            <img src="InWaves.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Snack.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="IsThisIt">
+        <div class="section-content">
+            <h2 class="album-title">
+                Is This It<br>
+                The Strokes
+            </h2>
+            <p>Indie Rock, Post-Punk Revival</p>
+            <img src="IsThisIt.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="PublicEnemy">
@@ -1046,7 +1455,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="KidA">
@@ -1067,7 +1476,27 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="LowEnd">
+        <div class="section-content">
+            <h2 class="album-title">
+                The Low End Theory<br>
+                A Tribe Called Quest, 1991
+            </h2>
+            <p>Jazz Rap, Alternative Hip-hop</p>
+            <img src="LowTheory.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Madvillainy">
@@ -1087,7 +1516,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
     </section>
 
@@ -1109,7 +1538,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
     </section>
 
@@ -1130,7 +1559,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="YUM.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
     </section>
 
@@ -1152,7 +1581,29 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="YUM.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+        </div>
+    </section>
+
+    <section id="NFR">
+        <div class="section-content">
+            <h2 class="album-title">
+                Norman Fucking Rockwell<br>
+                Lana Del Rey, 2019
+            </h2>
+            <p>Pop, Soft Rock</p>
+            <img src="NFR.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
     </section>
 
@@ -1173,7 +1624,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="OKcomp">
@@ -1194,7 +1645,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="OOZ">
@@ -1215,7 +1666,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Plastic">
@@ -1236,7 +1687,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="YUM.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Post">
@@ -1257,7 +1708,27 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="DeadQueen">
+        <div class="section-content">
+            <h2 class="album-title">
+                The Queen Is Dead<br>
+                The Smiths, 1986
+            </h2>
+            <p>Indie Rock, Post-Punk</p>
+            <img src="DeadQueen.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Reflektor">
@@ -1278,7 +1749,47 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="RemainLight">
+        <div class="section-content">
+            <h2 class="album-title">
+                Remain In Light<br>
+                Talking Heads, 1980
+            </h2>
+            <p>Post-Punk, Funk, Rock</p>
+            <img src="RemainLight.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Renaissance">
+        <div class="section-content">
+            <h2 class="album-title">
+                Renaissance<br>
+                Beyoncé, 2022
+            </h2>
+            <p>Dance, House, Pop</p>
+            <img src="Renaissance.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Yves">
@@ -1299,7 +1810,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="DELISH.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Settle">
@@ -1319,7 +1830,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Since">
@@ -1340,7 +1851,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="SoftBulletin">
@@ -1360,7 +1871,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="SongsKeyLife">
@@ -1380,7 +1891,27 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="StoneRoses">
+        <div class="section-content">
+            <h2 class="album-title">
+                The Stone Roses<br>
+                The Stone Roses, 1989
+            </h2>
+            <p>Alternative Rock, Madchester</p>
+            <img src="StoneRoses.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Interpol">
@@ -1401,7 +1932,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Unknown">
@@ -1422,7 +1953,7 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="Veckatimest">
@@ -1442,8 +1973,9 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="DELISH.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
+
 
     <section id="YHF">
         <div class="section-content">
@@ -1463,19 +1995,19 @@
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
             </div>
-            <button class="button" onclick="goBack()">Back to Navigation</button>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="services">
         <h2>Services Section</h2>
         <p>This is the services section content.</p>
-        <button class="button" onclick="goBack()">Back to Navigation</button>
+        <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <section id="contact">
         <h2>Contact Section</h2>
         <p>This is the contact section content.</p>
-        <button class="button" onclick="goBack()">Back to Navigation</button>
+        <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
     <script>

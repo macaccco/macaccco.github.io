@@ -653,530 +653,598 @@
         <div class="search-bar">
             <input id="albumSearch" type="search" placeholder="Search albums…">
         </div>
+        <div id="year-filters">
+            <button class="filter-btn active" data-all="true">All</button>
+            <button class="filter-btn" 
+                    data-start-year="1965" 
+                    data-end-year="1969">
+                1965-1969
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="1970" 
+                    data-end-year="1974">
+                1970-1974
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="1975" 
+                    data-end-year="1979">
+                1975-1979
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="1980" 
+                    data-end-year="1984">
+                1980–1984
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="1985" 
+                    data-end-year="1989">
+                1985–1989
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="1990" 
+                    data-end-year="1994">
+                1990-1994
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="1995" 
+                    data-end-year="1999">
+                1995–1999
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="2000" 
+                    data-end-year="2004">
+                2000–2004
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="2005" 
+                    data-end-year="2009">
+                2005–2009
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="2010" 
+                    data-end-year="2014">
+                2010–2014
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="2015" 
+                    data-end-year="2019">
+                2015–2019
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="2020" 
+                    data-end-year="2024">
+                2020–2024
+            </button>
+            <button class="filter-btn" 
+                    data-start-year="2025" 
+                    data-end-year="2025">
+                2025
+            </button>
+        </div>
         <div class="nav-container">
-            <div class="nav-item" data-album="Abbey Road" data-artist="The Beatles">
+            <div class="nav-item" data-album="Abbey Road" data-artist="The Beatles" data-year="1969">
                 <a href="#" onclick="showSection('AbbeyRoad')">
                     <img src="Abbey.png" alt="Abbey">
                     <span>Abbey Road<br>The Beatles<br>1969</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Agaetis Byrjun" data-artist="Sigur Ros">
+            <div class="nav-item" data-album="Agaetis Byrjun" data-artist="Sigur Ros" data-year="1999">
                 <a href="#" onclick="showSection('Agaetis')">
                     <img src="Agaetis.png" alt="Wutang">
                     <span>Ágætis byrjun<br>Sigur Rós<br>1999</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Animals" data-artist="Pink Floyd">
+            <div class="nav-item" data-album="Animals" data-artist="Pink Floyd" data-year="1977">
                 <a href="#" onclick="showSection('Animals')">
                     <img src="Animals.png" alt="Animals">
                     <span>Animals<br>Pink Floyd<br>1977</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Back To Black" data-artist="Amy Winehouse">
+            <div class="nav-item" data-album="Back To Black" data-artist="Amy Winehouse" data-year="2006">
                 <a href="#" onclick="showSection('Amy')">
                     <img src="Amy.png" alt="BonIver">
                     <span>Back To Black<br>Amy Winehouse<br>2006</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Being There" data-artist="Wilco">
+            <div class="nav-item" data-album="Being There" data-artist="Wilco" data-year="1996">
                 <a href="#" onclick="showSection('BeingThere')">
                     <img src="BeingThere.png" alt="BonIver">
                     <span>Being There<br>Wilco<br>1996</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Bends" data-artist="Radiohead">
+            <div class="nav-item" data-album="The Bends" data-artist="Radiohead" data-year="1995">
                 <a href="#" onclick="showSection('Bends')">
                     <img src="Bends.png" alt="BonIver">
                     <span>The Bends<br>Radiohead<br>1995</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Best Day Of My Life" data-artist="Tom Odell">
+            <div class="nav-item" data-album="Best Day Of My Life" data-artist="Tom Odell" data-year="2022">
                 <a href="#" onclick="showSection('SadBoy')">
                     <img src="SadBoy.png" alt="BonIver">
                     <span>Best Day Of My Life<br>Tom Odell<br>2022</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Beyonce">
+            <div class="nav-item" data-album="Beyonce" data-year="2014">
                 <a href="#" onclick="showSection('Beyonce')">
                     <img src="Beyonce.png" alt="BonIver">
                     <span>Beyoncé<br>Beyoncé<br>2014</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Blonde", data-artist="Frank Ocean">
+            <div class="nav-item" data-album="Blonde", data-artist="Frank Ocean" data-year="2016">
                 <a href="#" onclick="showSection('Blonde')">
                     <img src="Blonde.png" alt="BonIver">
                     <span>Blonde<br>Frank Ocean<br>2016</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Bon Iver, Bon Iver" data-artist="Bon Iver">
+            <div class="nav-item" data-album="Bon Iver, Bon Iver" data-artist="Bon Iver" data-year="2011">
                 <a href="#" onclick="showSection('BonIver')">
                     <img src="BonIver.png" alt="BonIver">
                     <span>Bon Iver, Bon Iver<br>Bon Iver<br>2011</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Born To Run" data-artist="Bruce Springsteen">
+            <div class="nav-item" data-album="Born To Run" data-artist="Bruce Springsteen" data-year="1975">
                 <a href="#" onclick="showSection('BornToRun')">
                     <img src="BornToRun.png" alt="BornToRun">
                     <span>Born To Run<br>Bruce Springsteen<br>1975</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="BRAT" data-artist="Charli XCX">
+            <div class="nav-item" data-album="BRAT" data-artist="Charli XCX" data-year="2024">
                 <a href="#" onclick="showSection('BRAT')">
                     <img src="BRAT.png" alt="BRAT">
                     <span>BRAT<br>Charli XCX<br>2024</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Channel Orange" data-artist="Frank Ocean">
+            <div class="nav-item" data-album="Channel Orange" data-artist="Frank Ocean" data-year="2012">
                 <a href="#" onclick="showSection('ORANGE')">
                     <img src="ORANGE.png" alt="Doolittle">
                     <span>Channel Orange<br>Frank Ocean<br>2012</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Cowboy Carter" data-artist="Beyoncé">
+            <div class="nav-item" data-album="Cowboy Carter" data-artist="Beyoncé" data-year="2024">
                 <a href="#" onclick="showSection('Cowboy')">
                     <img src="Cowboy.png" alt="Doolittle">
                     <span>Cowboy Carter<br>Beyoncé<br>2024</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Ctrl" data-artist="SZA">
+            <div class="nav-item" data-album="Ctrl" data-artist="SZA" data-year="2017">
                 <a href="#" onclick="showSection('Ctrl')">
                     <img src="Ctrl.png" alt="Doolittle">
                     <span>Ctrl<br>SZA<br>2017</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Currents" data-artist="Tame Impala">
+            <div class="nav-item" data-album="Currents" data-artist="Tame Impala" data-year="2015">
                 <a href="#" onclick="showSection('Currents')">
                     <img src="Currents.png" alt="Doolittle">
                     <span>Currents<br>Tame Impala<br>2015</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Dark Side Of The Moon" data-artist="Pink Floyd">
+            <div class="nav-item" data-album="The Dark Side Of The Moon" data-artist="Pink Floyd" data-year="1973">
                 <a href="#" onclick="showSection('Dsom')">
                     <img src="dsom.png" alt="Doolittle">
                     <span>The Dark Side Of The Moon<br>Pink Floyd<br>1973</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Discovery" data-artist="Daft Punk">
+            <div class="nav-item" data-album="Discovery" data-artist="Daft Punk" data-year="2001">
                 <a href="#" onclick="showSection('Discovery')">
                     <img src="Discovery.png" alt="Doolittle">
                     <span>Discovery<br>Daft Punk<br>2001</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Doolittle" data-artist="Pixies">
+            <div class="nav-item" data-album="Doolittle" data-artist="Pixies" data-year="1989">
                 <a href="#" onclick="showSection('Doolittle')">
                     <img src="Doolittle.png" alt="Doolittle">
                     <span>Doolittle<br>Pixies<br>1989</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Either/Or" data-artist="Elliott Smith">
+            <div class="nav-item" data-album="Either/Or" data-artist="Elliott Smith" data-year="1997">
                 <a href="#" onclick="showSection('EitherOr')">
                     <img src="EitherOr.png" alt="EitherOr">
                     <span>Either/Or<br>Elliott Smith<br>1997</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Entertainment" data-artist="Gang Of Four">
+            <div class="nav-item" data-album="Entertainment" data-artist="Gang Of Four" data-year="1979">
                 <a href="#" onclick="showSection('Entertainment')">
                     <img src="Entertainment.png" alt="EitherOr">
                     <span>Entertainment<br>Gang Of Four<br>1979</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Enter The Wu-Tang (36 Chambers)" data-artist="Wu-Tang Clan">
+            <div class="nav-item" data-album="Enter The Wu-Tang (36 Chambers)" data-artist="Wu-Tang Clan" data-year="1993">
                 <a href="#" onclick="showSection('Wutang')">
                     <img src="WuTang.png" alt="EitherOr">
                     <span>Enter The Wu-Tang (36 Chambers)<br>Wu-Tang Clan<br>1993</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Eusexua" data-artist="FKA Twigs">
+            <div class="nav-item" data-album="Eusexua" data-artist="FKA Twigs" data-year="2025">
                 <a href="#" onclick="showSection('Eusexua')">
                     <img src="Eusexua.png" alt="EitherOr">
                     <span>Eusexua<br>FKA Twigs<br>2025</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Fear Of Music" data-artist="Talking Heads">
+            <div class="nav-item" data-album="Fear Of Music" data-artist="Talking Heads" data-year="1979">
                 <a href="#" onclick="showSection('FearMusic')">
                     <img src="FearMusic.png" alt="FetchBoltCutters">
                     <span>Fear Of Music<br>Talking Heads<br>1979</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Fetch The Bolt Cutters" data-artist="Fiona Apple">
+            <div class="nav-item" data-album="Fetch The Bolt Cutters" data-artist="Fiona Apple" data-year="2020">
                 <a href="#" onclick="showSection('FetchBoltCutters')">
                     <img src="FetchBoltCutters.png" alt="FetchBoltCutters">
                     <span>Fetch The Bolt Cutters<br>Fiona Apple<br>2020</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Franz Ferdinand" data-artist="Franz Ferdinand">
+            <div class="nav-item" data-album="Franz Ferdinand" data-artist="Franz Ferdinand" data-year="2004">
                 <a href="#" onclick="showSection('Franz')">
                     <img src="Franz.png" alt="FetchBoltCutters">
                     <span>Franz Ferdinand<br>Franz Ferdinand<br>2004</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Funeral" data-artist="Arcade Fire">
+            <div class="nav-item" data-album="Funeral" data-artist="Arcade Fire" data-year="2004">
                 <a href="#" onclick="showSection('Funeral')">
                     <img src="Funeral.png" alt="FetchBoltCutters">
                     <span>Funeral<br>Arcade Fire<br>2004</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Golden Hour" data-artist="Kacey Musgraves">
+            <div class="nav-item" data-album="Golden Hour" data-artist="Kacey Musgraves" data-year="2018">
                 <a href="#" onclick="showSection('GoldenHour')">
                     <img src="GoldenHour.png" alt="GoldenHour">
                     <span>Golden Hour<br>Kacey Musgraves<br>2018</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Grace" data-artist="Jeff Buckley">
+            <div class="nav-item" data-album="Grace" data-artist="Jeff Buckley" data-year="1994">
                 <a href="#" onclick="showSection('Grace')">
                     <img src="Grace.png" alt="Grace">
                     <span>Grace<br>Jeff Buckley<br>1994</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Heaven Or Las Vegas" data-artist="Cocteau Twins">
+            <div class="nav-item" data-album="Heaven Or Las Vegas" data-artist="Cocteau Twins" data-year="1990">
                 <a href="#" onclick="showSection('Heaven')">
                     <img src="Heaven.png" alt="Grace">
                     <span>Heaven Or Las Vegas<br>Cocteau Twins<br>1990</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Homogenic" data-artist="Bjork">
+            <div class="nav-item" data-album="Homogenic" data-artist="Bjork" data-year="1997">
                 <a href="#" onclick="showSection('Homo')">
                     <img src="Homo.png" alt="Grace">
                     <span>Homogenic<br>Björk<br>1997</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Hounds Of Love" data-artist="Kate Bush">
+            <div class="nav-item" data-album="Hounds Of Love" data-artist="Kate Bush" data-year="1985">
                 <a href="#" onclick="showSection('KateBush')">
                     <img src="KateBush.png" alt="Grace">
                     <span>Hounds Of Love<br>Kate Bush<br>1985</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Hunky Dory" data-artist="David Bowie">
+            <div class="nav-item" data-album="Hunky Dory" data-artist="David Bowie" data-year="1971">
                 <a href="#" onclick="showSection('HunkyDory')">
                     <img src="HunkyDory.png" alt="Grace">
                     <span>Hunky Dory<br>David Bowie<br>1971</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Ill Communication" data-artist="Beastie Boys">
+            <div class="nav-item" data-album="Ill Communication" data-artist="Beastie Boys" data-year="1994">
                 <a href="#" onclick="showSection('Beastie')">
                     <img src="Beastie.png" alt="Grace">
                     <span>Ill Communication<br>Beastie Boys<br>1994</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Illinois" data-artist="Sufjan Stevens">
+            <div class="nav-item" data-album="Illinois" data-artist="Sufjan Stevens" data-year="2005">
                 <a href="#" onclick="showSection('Illinois')">
                     <img src="Illinois.png" alt="Grace">
                     <span>Illinoise<br>Sufjan Stevens<br>2005</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Illmatic" data-artist="Nas">
+            <div class="nav-item" data-album="Illmatic" data-artist="Nas" data-year="1994">
                 <a href="#" onclick="showSection('Illmatic')">
                     <img src="illmatic.png" alt="Grace">
                     <span>Illmatic<br>Nas<br>1994</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="In Rainbows" data-artist="Radiohead">
+            <div class="nav-item" data-album="In Rainbows" data-artist="Radiohead" data-year="2007">
                 <a href="#" onclick="showSection('InRainbows')">
                     <img src="InRainbows.png" alt="Grace">
                     <span>In Rainbows<br>Radiohead<br>2007</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="In The Aeroplane Over The Sea" data-artist="Neutral Milk Hotel">
+            <div class="nav-item" data-album="In The Aeroplane Over The Sea" data-artist="Neutral Milk Hotel" data-year="1998">
                 <a href="#" onclick="showSection('Aeroplane')">
                     <img src="Aeroplane.png" alt="Abbey">
                     <span>In The Aeroplane Over The Sea<br>Neutral Milk Hotel<br>1998</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="In Waves" data-artist="Jamie XX">
+            <div class="nav-item" data-album="In Waves" data-artist="Jamie XX" data-year="2024">
                 <a href="#" onclick="showSection('InWaves')">
                     <img src="InWaves.png" alt="Grace">
                     <span>In Waves<br>Jamie xx<br>2024</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Is This It" data-artist="The Strokes">
+            <div class="nav-item" data-album="Is This It" data-artist="The Strokes" data-year="2001">
                 <a href="#" onclick="showSection('IsThisIt')">
                     <img src="IsThisIt.png" alt="Grace">
                     <span>Is This It<br>The Strokes<br>2001</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="It Takes A Nation Of Millions To Hold Us Back" data-artist="Public Enemy">
+            <div class="nav-item" data-album="It Takes A Nation Of Millions To Hold Us Back" data-artist="Public Enemy" data-year="1988">
                 <a href="#" onclick="showSection('PublicEnemy')">
                     <img src="PublicEnemy.png" alt="Grace">
                     <span>It Takes A Nation Of Millions To Hold Us Back<br>Public Enemy<br>1988</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Kid A" data-artist="Radiohead">
+            <div class="nav-item" data-album="Kid A" data-artist="Radiohead" data-year="2000">
                 <a href="#" onclick="showSection('KidA')">
                     <img src="KidA.png" alt="Grace">
                     <span>Kid A<br>Radiohead<br>2000</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Lemonade" data-artist="Beyoncé">
+            <div class="nav-item" data-album="Lemonade" data-artist="Beyoncé" data-year="2016">
                 <a href="#" onclick="showSection('Lemonade')">
                     <img src="Lemonade.png" alt="Grace">
                     <span>Lemonade<br>Beyoncé<br>2016</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="London Calling" data-artist="The Clash">
+            <div class="nav-item" data-album="London Calling" data-artist="The Clash" data-year="1979">
                     <a href="#" onclick="showSection('Londonban')">
                         <img src="Londonban.png" alt="YHF">
                         <span>London Calling<br>The Clash<br>1979</span>
                     </a>
             </div>
-            <div class="nav-item" data-album="The Low End Theory" data-artist="A Tribe Called Quest">
+            <div class="nav-item" data-album="The Low End Theory" data-artist="A Tribe Called Quest" data-year="1991">
                 <a href="#" onclick="showSection('LowEnd')">
                     <img src="LowTheory.png" alt="Grace">
                     <span>The Low End Theory<br>A Tribe Called Quest<br>1991</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Madvillainy" data-artist="Madvillain">
+            <div class="nav-item" data-album="Madvillainy" data-artist="Madvillain" data-year="2004">
                 <a href="#" onclick="showSection('Madvillainy')">
                     <img src="Madvillainy.png" alt="MPP">
                     <span>Madvillainy<br>Madvillain<br>2004</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Merriweather Post Pavilion" data-artist="Animal Collective">
+            <div class="nav-item" data-album="Merriweather Post Pavilion" data-artist="Animal Collective" data-year="2009">
                 <a href="#" onclick="showSection('MPP')">
                     <img src="MPP.png" alt="MPP">
                     <span>Merriweather Post Pavilion<br>Animal Collective<br>2009</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Miseducation of lauryn hill">
+            <div class="nav-item" data-album="The Miseducation of lauryn hill" data-year="1998">
                 <a href="#" onclick="showSection('Lauryn')">
                     <img src="Lauryn.png" alt="MPP">
                     <span>The Miseducation Of Lauryn Hill<br>Lauryn Hill<br>1998</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Money Store" data-artist="Death Grips">
+            <div class="nav-item" data-album="The Money Store" data-artist="Death Grips" data-year="2012">
                 <a href="#" onclick="showSection('Money')">
                     <img src="Money.png" alt="MPP">
                     <span>The Money Store<br>Death Grips<br>2012</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Moon Safari" data-artist="Air">
+            <div class="nav-item" data-album="Moon Safari" data-artist="Air" data-year="1998">
                 <a href="#" onclick="showSection('MoonSafari')">
                     <img src="MoonSafari.png" alt="MPP">
                     <span>Moon Safari<br>Air<br>1998</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Moving Pictures" data-artist="RUSH">
+            <div class="nav-item" data-album="Moving Pictures" data-artist="RUSH" data-year="1981">
                 <a href="#" onclick="showSection('RUSH')">
                     <img src="RUSH.png" alt="Odelay">
                     <span>Moving Pictures<br>RUSH<br>1981</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="My Beautiful Dark Twisted Fantasy" data-artist="Kanye West">
+            <div class="nav-item" data-album="My Beautiful Dark Twisted Fantasy" data-artist="Kanye West" data-year="2010">
                 <a href="#" onclick="showSection('MBDTF')">
                     <img src="MBDTF.png" alt="MPP">
                     <span>My Beautiful Dark Twisted Fantasy<br>Kanye West<br>2010</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Norman Fucking Rockwell!" data-artist="Lana Del Rey">
+            <div class="nav-item" data-album="Norman Fucking Rockwell!" data-artist="Lana Del Rey" data-year="2019">
                 <a href="#" onclick="showSection('NFR')">
                     <img src="NFR.png" alt="MPP">
                     <span>Norman Fucking Rockwell<br>Lana Del Rey<br>2019</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Odelay" data-artist="Beck">
+            <div class="nav-item" data-album="Odelay" data-artist="Beck" data-year="1996">
                 <a href="#" onclick="showSection('Odelay')">
                     <img src="Odelay.png" alt="Odelay">
                     <span>Odelay<br>Beck<br>1996</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="OK Computer" data-artist="Radiohead">
+            <div class="nav-item" data-album="OK Computer" data-artist="Radiohead" data-year="1997">
                 <a href="#" onclick="showSection('OKcomp')">
                     <img src="OKcomp.png" alt="Odelay">
                     <span>OK Computer<br>Radiohead<br>1997</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The OOZ" data-artist="King Krule">
+            <div class="nav-item" data-album="The OOZ" data-artist="King Krule" data-year="2017">
                 <a href="#" onclick="showSection('OOZ')">
                     <img src="OOZ.png" alt="Odelay">
                     <span>The OOZ<br>King Krule<br>2017</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Our Favourite Shop" data-artist="The Style Council">
+            <div class="nav-item" data-album="Our Favourite Shop" data-artist="The Style Council" data-year="1985">
                 <a href="#" onclick="showSection('FavShop')">
                     <img src="FavShop.png" alt="Odelay">
                     <span>Our Favourite Shop<br>The Style Council<br>1985</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Pet Sounds" data-artist="The Beach Boys">
+            <div class="nav-item" data-album="Pet Sounds" data-artist="The Beach Boys" data-year="1966">
                 <a href="#" onclick="showSection('Pets')">
                     <img src="Pets.png" alt="Odelay">
                     <span>Pet Sounds<br>The Beach Boys<br>1966</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Plastic Beach" data-artist="Gorillaz">
+            <div class="nav-item" data-album="Plastic Beach" data-artist="Gorillaz" data-year="2010">
                 <a href="#" onclick="showSection('Plastic')">
                     <img src="Plastic.png" alt="Odelay">
                     <span>Plastic Beach<br>Gorillaz<br>2010</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Post" data-artist="Bjork">
+            <div class="nav-item" data-album="Post" data-artist="Bjork" data-year="1995">
                 <a href="#" onclick="showSection('Post')">
                     <img src="Post.png" alt="Odelay">
                     <span>Post<br>Björk<br>1995</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Purple Rain" data-artist="Prince">
+            <div class="nav-item" data-album="Purple Rain" data-artist="Prince" data-year="1984">
                     <a href="#" onclick="showSection('Prince')">
                         <img src="Prince.png" alt="Animals">
                         <span>Purple Rain<br>Prince<br>1984</span>
                     </a>
                 </div>
-            <div class="nav-item" data-album="The Queen Is Dead" data-artist="The Smiths">
+            <div class="nav-item" data-album="The Queen Is Dead" data-artist="The Smiths" data-year="1986">
                 <a href="#" onclick="showSection('DeadQueen')">
                     <img src="DeadQueen.png" alt="Odelay">
                     <span>The Queen Is Dead<br>The Smiths<br>1986</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Reflektor" data-artist="Arcade Fire">
+            <div class="nav-item" data-album="Reflektor" data-artist="Arcade Fire" data-year="2013">
                 <a href="#" onclick="showSection('Reflektor')">
                     <img src="Reflektor.png" alt="SoftBulletin">
                     <span>Reflektor<br>Arcade Fire<br>2013</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Remain In Light" data-artist="Talking Heads">
+            <div class="nav-item" data-album="Remain In Light" data-artist="Talking Heads" data-year="1980">
                 <a href="#" onclick="showSection('RemainLight')">
                     <img src="RemainLight.png" alt="SoftBulletin">
                     <span>Remain In Light<br>Talking Heads<br>1980</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Renaissance" data-artist="Beyonce">
+            <div class="nav-item" data-album="Renaissance" data-artist="Beyonce" data-year="2022">
                 <a href="#" onclick="showSection('Renaissance')">
                     <img src="Renaissance.png" alt="SoftBulletin">
                     <span>Renaissance<br>Beyoncé<br>2022</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Rumours" data-artist="Fleetwood Mac">
+            <div class="nav-item" data-album="Rumours" data-artist="Fleetwood Mac" data-year="1977">
                 <a href="#" onclick="showSection('Rumours')">
                     <img src="Rumours.png" alt="SoftBulletin">
                     <span>Rumours<br>Fleetwood Mac<br>1977</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Run The Jewels">
+            <div class="nav-item" data-album="Run The Jewels" data-year="2013">
                 <a href="#" onclick="showSection('RTJ')">
                     <img src="RTJ.png" alt="SoftBulletin">
                     <span>Run The Jewels<br>Run The Jewels<br>2013</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Safe In The Hands Of Love" data-artist="Yves Tumor">
+            <div class="nav-item" data-album="Safe In The Hands Of Love" data-artist="Yves Tumor" data-year="2018">
                 <a href="#" onclick="showSection('Yves')">
                     <img src="Yves.png" alt="SoftBulletin">
                     <span>Safe In The Hands Of Love<br>Yves Tumor<br>2018</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Settle" data-artist="Disclosure">
+            <div class="nav-item" data-album="Settle" data-artist="Disclosure" data-year="2013">
                 <a href="#" onclick="showSection('Settle')">
                     <img src="Settle.png" alt="SoftBulletin">
                     <span>Settle<br>Disclosure<br>2013</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Since I Left You" data-artist="The Avalanches">
+            <div class="nav-item" data-album="Since I Left You" data-artist="The Avalanches" data-year="2000">
                 <a href="#" onclick="showSection('Since')">
                     <img src="Since.png" alt="SoftBulletin">
                     <span>Since I Left You<br>The Avalanches<br>2000</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Soft Bulletin" data-artist="The Flaming Lips">
+            <div class="nav-item" data-album="The Soft Bulletin" data-artist="The Flaming Lips" data-year="1999">
                 <a href="#" onclick="showSection('SoftBulletin')">
                     <img src="SoftBulletin.png" alt="SoftBulletin">
                     <span>The Soft Bulletin<br>The Flaming Lips<br>1999</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Songs In The Key Of Life" data-artist="Stevie Wonder">
+            <div class="nav-item" data-album="Songs In The Key Of Life" data-artist="Stevie Wonder" data-year="1976">
                 <a href="#" onclick="showSection('SongsKeyLife')">
                     <img src="SongsKeyLife.png" alt="SoftBulletin">
                     <span>Songs In The Key Of Life<br>Stevie Wonder<br>1976</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="SOS" data-artist="SZA">
+            <div class="nav-item" data-album="SOS" data-artist="SZA" data-year="2022">
                 <a href="#" onclick="showSection('SOS')">
                     <img src="SOS.png" alt="SoftBulletin">
                     <span>SOS<br>SZA<br>2022</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Sound of silver" data-artist="LCD Soundsystem">
+            <div class="nav-item" data-album="Sound of silver" data-artist="LCD Soundsystem" data-year="2007">
                 <a href="#" onclick="showSection('Silver')">
                     <img src="Silver.png" alt="SoftBulletin">
                     <span>Sound Of Silver<br>LCD Soundsystem<br>2007</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Stone Roses" data-artist="The Stone Roses">
+            <div class="nav-item" data-album="The Stone Roses" data-artist="The Stone Roses" data-year="1989">
                 <a href="#" onclick="showSection('StoneRoses')">
                     <img src="StoneRoses.png" alt="SoftBulletin">
                     <span>The Stone Roses<br>The Stone Roses<br>1989</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Strange Mercy" data-artist="St. Vincent">
+            <div class="nav-item" data-album="Strange Mercy" data-artist="St. Vincent" data-year="2011">
                 <a href="#" onclick="showSection('StrangeMercy')">
                     <img src="StrangeMercy.png" alt="SoftBulletin">
                     <span>Strange Mercy<br>St. Vincent<br>2011</span>
                 </a>
             </div>
-            <div class="nav-item" data-artist="St. Vincent">
+            <div class="nav-item" data-artist="St. Vincent" data-year="2014">
                 <a href="#" onclick="showSection('Vincent')">
                     <img src="Vincent.png" alt="SoftBulletin">
                     <span>St. Vincent<br>St. Vincent<br>2014</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Suburbs" data-artist="Arcade Fire">
+            <div class="nav-item" data-album="The Suburbs" data-artist="Arcade Fire" data-year="2010">
                 <a href="#" onclick="showSection('Suburbs')">
                     <img src="Suburbs.png" alt="SoftBulletin">
                     <span>The Suburbs<br>Arcade Fire<br>2010</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Summerteeth" data-artist="Wilco">
+            <div class="nav-item" data-album="Summerteeth" data-artist="Wilco" data-year="1999">
                 <a href="#" onclick="showSection('Summerteeth')">
                     <img src="Summerteeth.png" alt="SoftBulletin">
                     <span>Summerteeth<br>Wilco<br>1999</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Tango In The Night" data-artist="Fleetwood Mac">
+            <div class="nav-item" data-album="Tango In The Night" data-artist="Fleetwood Mac" data-year="1987">
                 <a href="#" onclick="showSection('Tango')">
                     <img src="Tango.png" alt="SoftBulletin">
                     <span>Tango In The Night<br>Fleetwood Mac<br>1987</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="This Is Happening" data-artist="LCD Soundsystem">
+            <div class="nav-item" data-album="This Is Happening" data-artist="LCD Soundsystem" data-year="2010">
                 <a href="#" onclick="showSection('ThisHappening')">
                     <img src="ThisHappening.png" alt="SoftBulletin">
                     <span>This Is Happening<br>LCD Soundsystem<br>2010</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="To Pimp A Butterfly" data-artist="Kendrick Lamar">
+            <div class="nav-item" data-album="To Pimp A Butterfly" data-artist="Kendrick Lamar" data-year="2015">
                 <a href="#" onclick="showSection('TPAB')">
                     <img src="TPAB.png" alt="SoftBulletin">
                     <span>To Pimp A Butterfly<br>Kendrick Lamar<br>2015</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Turn On The Bright Lights" data-artist="Interpol">
+            <div class="nav-item" data-album="Turn On The Bright Lights" data-artist="Interpol" data-year="2002">
                 <a href="#" onclick="showSection('Interpol')">
                     <img src="Interpol.png" alt="SoftBulletin">
                     <span>Turn On The Bright Lights<br>Interpol<br>2002</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Unknown Pleasures" data-artist="Joy Division">
+            <div class="nav-item" data-album="Unknown Pleasures" data-artist="Joy Division" data-year="1979">
                 <a href="#" onclick="showSection('Unknown')">
                     <img src="UnknownPleasures.png" alt="SoftBulletin">
                     <span>Unknown Pleasures<br>Joy Division<br>1979</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Veckatimest" data-artist="Grizzly Bear">
+            <div class="nav-item" data-album="Veckatimest" data-artist="Grizzly Bear" data-year="2009">
                 <a href="#" onclick="showSection('Veckatimest')">
                     <img src="Veckatimest.png" alt="SoftBulletin">
                     <span>Veckatimest<br>Grizzly Bear<br>2009</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="The Velvet Underground & Nico">
+            <div class="nav-item" data-album="The Velvet Underground & Nico" data-year="1967">
                 <a href="#" onclick="showSection('Banana')">
                     <img src="Banana.png" alt="SoftBulletin">
                     <span>The Velvet Underground & Nico<br>The Velvet Underground & Nico<br>1967</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="What's Going on?" data-artist="Marvin Gaye">
+            <div class="nav-item" data-album="What's Going on?" data-artist="Marvin Gaye" data-year="1971">
                 <a href="#" onclick="showSection('Marvin')">
                     <img src="Marvin.png" alt="SoftBulletin">
                     <span>What's Going On?<br>Marvin Gaye<br>1971</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Yankee Hotel Foxtrot" data-artist="Wilco">
+            <div class="nav-item" data-album="Yankee Hotel Foxtrot" data-artist="Wilco" data-year="2002">
                 <a href="#" onclick="showSection('YHF')">
                     <img src="YHF.png" alt="YHF">
                     <span>Yankee Hotel Foxtrot<br>Wilco<br>2002</span>
@@ -1195,14 +1263,33 @@
                 padding: .5rem .75rem;
                 box-sizing: border-box;
             }
+
+            .filter-btn {
+                margin: 0 0.25em;
+                padding: 0.3em 0.6em;
+                cursor: pointer;
+                border: 1px solid #666;
+                background: #fff;
+            }
+            .filter-btn.active {
+                background: #666;
+                color: #fff;
+            }
         </style>
 
         <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const input = document.querySelector('#albumSearch');
-            const items = [...document.querySelectorAll('#albums .nav-item')];
+            const input      = document.querySelector('#albumSearch');
+            const items      = Array.from(document.querySelectorAll('#albums .nav-item'));
+            const yearBtns   = Array.from(document.querySelectorAll('#year-filters .filter-btn'));
+            let activeStart  = null;    // null means unbounded
+            let activeEnd    = null;    // null means unbounded
 
-            const norm = s => (s || '').normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+            // your existing normalisation
+            const norm = s => (s||'')
+                .normalize('NFD')
+                .replace(/\p{Diacritic}/gu, '')
+                .toLowerCase();
 
             const haystack = el => norm([
                 el.dataset.album,
@@ -1211,16 +1298,53 @@
 
             function filter() {
                 const q = norm(input.value.trim());
+
                 items.forEach(el => {
-                    const hide = q && !haystack(el).includes(q);
-                    el.classList.toggle('is-filtered', hide);
+                // text criterion
+                const matchesText = !q || haystack(el).includes(q);
+
+                // year criterion
+                const year = parseInt(el.dataset.year, 10);
+                const inLower  = (activeStart  === null || year >= activeStart);
+                const inUpper  = (activeEnd    === null || year <= activeEnd);
+                const matchesYear = inLower && inUpper;
+
+                // hide if either filter fails
+                el.classList.toggle('is-filtered', !(matchesText && matchesYear));
                 });
             }
 
+            // hook up text search
             input.addEventListener('input', filter);
-            filter(); // initial pass so everything is visible
+
+            // hook up year/range buttons
+            yearBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                // set button styling
+                yearBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // determine new range
+                if (btn.dataset.all) {
+                    activeStart = activeEnd = null;
+                } else if (btn.dataset.year) {
+                    const y = parseInt(btn.dataset.year, 10);
+                    activeStart = activeEnd = y;
+                } else {
+                    activeStart = parseInt(btn.dataset.startYear, 10);
+                    activeEnd   = parseInt(btn.dataset.endYear,   10);
+                }
+
+                filter();
+                });
+            });
+
+            // initial invocation
+            filter();
         });
         </script>
+
+
     </section>
     
 

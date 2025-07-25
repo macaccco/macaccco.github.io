@@ -194,6 +194,36 @@
             align-items: center;     /* Centers elements vertically */
         }
 
+        .month-item {
+            text-align: center;          /* Center the text inside the nav */
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .month-item img {
+            width: 150px;
+            height: 150px;
+            transition: opacity 0.3s ease; /* Smooth hover effect */
+        }
+
+        .month-item:hover img {
+            opacity: 0.8;  /* Optional hover effect */
+        }
+
+        .month-item span {
+            display: block;              /* Make the text appear below the image */
+            font-size: 18px;             /* Font size for the text */
+            color: white;                /* Default text color */
+            margin-top: 0px;             /* Space between image and text */
+            font-family: "Josefin Sans", sans-serif; /* 'Roboto' font for the text */
+            font-weight: 700;            /* Make the text bold */
+            transition: color 0.3s;      /* Smooth transition for color change */
+        }
+
+        .month-item:hover span {
+            color: #8a1d52;                  /* Text turns red on hover */
+        }
+
         .nav-item span {
             display: block;              /* Make the text appear below the image */
             font-size: 18px;             /* Font size for the text */
@@ -340,10 +370,10 @@
 
     <section id="Month" class="section">
         <h1 class="album-title">PetyaSpoon's Monthly Delicacy</h1>
-        <div class="nav-item" data-album="Headlights" data-artist="Alex G" data-year="2025">
+        <div class="month-item" data-album="Headlights" data-artist="Alex G" data-year="2025">
             <a href="#" onclick="showSection('Headlights')">
                 <img src="HeadlightsJuly.png" alt="SoftBulletin">
-                <span>Headlights<br>Alex G<br>2025</span>
+                <span>Headlights<br>Alex G<br>July, 2025</span>
             </a>
         </div>
         

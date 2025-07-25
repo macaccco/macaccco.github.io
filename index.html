@@ -340,6 +340,23 @@
             background-color: #8a1d52;        /* Change background color on hover */
         }
 
+        .top-bar .home-button5 {
+            background-color: black;          /* Black background */
+            color: white;                     /* White text */
+            border: 1px solid black;          /* White border */
+            padding: 10px 20px;                /* Padding around the button */
+            font-size: 16px;                   /* Font size for the button */
+            cursor: pointer;                  /* Pointer cursor on hover */
+            position: relative;
+            left: 0px;
+        }
+        
+
+        /* Hover effect for the back button */
+        .top-bar .home-button5:hover {
+            background-color: #8a1d52;        /* Change background color on hover */
+        }
+
         /* Back button styling inside the top bar */
         .top-bar .nav-button {
             background-color: black;          /* Black background */
@@ -366,6 +383,7 @@
         <button class="home-button2" onclick="goToDelicacy()">PetyaSpoon's Monthly Delicacy</button>
         <button class="home-button3" onclick="goToHome()">RobKnife's Top 100</button>
         <button class="home-button4" onclick="goToJoint()">Joint Best Albums</button>
+        <button class="home-button5" onclick="goToWorst()">Joint Worst Albums</button>
     </div>
 
     <section id="Month" class="section">
@@ -491,6 +509,24 @@
             </div>
         </div>
     </section>
+    <section id="Worst">
+        <div class="rank-container">
+            <h2>Combined Worst Albums</h2>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('KillMe')">
+                    <img src="KillMe.png" alt="MPP">
+                    <span>1. -<br>Ed Sheeran<br>2023</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('SadBoy')">
+                    <img src="SadBoy.png" alt="MPP">
+                    <span>2. Best Day Of My Life<br>Tom Odell<br>2022</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Home Section -->
     <section id="home">
         <div class="search-bar">
@@ -1286,6 +1322,12 @@
                     <span>2<br>Mac DeMarco<br>2012</span>
                 </a>
             </div>
+            <div class="nav-item" data-album="-" data-artist="Ed Sheeran" data-year="2023" data-score-user="BLEH" data-score-partner="BLEH">
+                <a href="#" onclick="showSection('KillMe')">
+                    <img src="KillMe.png" alt="Abbey">
+                    <span>-<br>Ed Sheeran<br>2023</span>
+                </a>
+            </div>
             <div class="nav-item" data-album="Abbey Road" data-artist="The Beatles" data-year="1969" data-score-user="YUM">
                 <a href="#" onclick="showSection('AbbeyRoad')">
                     <img src="Abbey.png" alt="Abbey">
@@ -1652,7 +1694,7 @@
                     <span>The Money Store<br>Death Grips<br>2012</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Moon Music" data-artist="Coldplay" data-year="2024" data-score-partner="BLEH">
+            <div class="nav-item" data-album="Moon Music" data-artist="Coldplay" data-year="2024" data-score-user="EWW" data-score-partner="BLEH">
                 <a href="#" onclick="showSection('MoonMusic')">
                     <img src="MoonMusic.png" alt="MPP">
                     <span>Moon Music<br>Coldplay<br>2024</span>
@@ -2119,6 +2161,29 @@
         </div>
     </section>
 
+    <section id="KillMe">
+        <div class="section-content">
+            <h2 class="album-title">
+                -<br>
+                Ed Sheeran, 2023<br>
+                Shit pop
+            </h2>
+            <img src="KillMe.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="BLEH.png"  alt="★"> 
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★">
+                <img src="BLEH.png"  alt="★"> 
+            </div>
+            <p>Writing an album in 2 hours is not a flex Ed...<br>If divide was a nice solid poo, this is like a wet fart. He's completely given up trying</p>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+        </div>
+    </section>
+
     <section id="Agaetis">
         <div class="section-content">
             <h2>Ágætis byrjun</h2>
@@ -2270,7 +2335,6 @@
                 Best Day Of My Life<br>
                 Tom Odell
             </h2>
-            <p>Sad boy sings about being sad</p>
             <img src="SadBoy.png" alt="Agaetis Image">
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
@@ -2281,6 +2345,7 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
+            <p>I know how to not be sad anymore... Listen to something else</p>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
@@ -3379,17 +3444,23 @@
                 Moon Music<br>
                 Coldplay, 2024
             </h2>
-            <p>Sexy Chris Martin</p>
             <img src="MoonMusic.png" alt="Agaetis Image">
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="RobKnife.png"  alt="★"> 
+                <img src="Eww.png"  alt="★">
             </div>
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="BLEH.png"  alt="★">
             </div>
+            <p>Coldplay's tenth album about the same things: Love, Nature and la-la-la</p>
+            <h2>Rob's Take:</h2>
+            <p>Sexy Chris Martin</p>
+            <p>Only tolerable song: GOOD FEELINGS</p>
+            <h2>Petya's Take:</h2>
+            <p>Ugly Chris Martin. Unbearably cheesy.</p>
             <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
     </section>
@@ -4409,6 +4480,10 @@
         // Go to the navbar from home
         function goToNavbar() {
             showSection('albums');
+        }
+
+        function goToWorst() {
+            showSection('Worst');
         }
 
         // Go back to the home section

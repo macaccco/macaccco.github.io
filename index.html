@@ -1101,6 +1101,12 @@
             <button class="score-btn" data-score="BLEH">BLEH</button>
         </div>
         <div class="nav-container">
+            <div class="nav-item" data-album="2" data-artist="Mac DeMarco" data-year="2012" data-score-partner="YUM">
+                <a href="#" onclick="showSection('DeMarco')">
+                    <img src="DeMarco.png" alt="Abbey">
+                    <span>2<br>Mac DeMarco<br>2012</span>
+                </a>
+            </div>
             <div class="nav-item" data-album="Abbey Road" data-artist="The Beatles" data-year="1969" data-score-user="YUM">
                 <a href="#" onclick="showSection('AbbeyRoad')">
                     <img src="Abbey.png" alt="Abbey">
@@ -1219,6 +1225,12 @@
                 <a href="#" onclick="showSection('Dsom')">
                     <img src="dsom.png" alt="Doolittle">
                     <span>The Dark Side Of The Moon<br>Pink Floyd<br>1973</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Dear Science" data-artist="TV On The Radio" data-year="2008" data-score-partner="DELISH">
+                <a href="#" onclick="showSection('DearScience')">
+                    <img src="DearScience.png" alt="Doolittle">
+                    <span>Dear Science<br>TV On The Radio<br>2008</span>
                 </a>
             </div>
             <div class="nav-item" data-album="Discovery" data-artist="Daft Punk" data-year="2001" data-score-user="YUM" data-score-partner="YUM">
@@ -1455,7 +1467,7 @@
                     <span>Moon Music<br>Coldplay<br>2024</span>
                 </a>
             </div>
-            <div class="nav-item" data-album="Moon Safari" data-artist="Air" data-year="1998" data-score-partner="YUM">
+            <div class="nav-item" data-album="Moon Safari" data-artist="Air" data-year="1998" data-score-partner="DELISH">
                 <a href="#" onclick="showSection('MoonSafari')">
                     <img src="MoonSafari.png" alt="MPP">
                     <span>Moon Safari<br>Air<br>1998</span>
@@ -1519,6 +1531,12 @@
                 <a href="#" onclick="showSection('Plastic')">
                     <img src="Plastic.png" alt="Odelay">
                     <span>Plastic Beach<br>Gorillaz<br>2010</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Pom Pom" data-artist="Ariel Pink" data-year="2014" data-score-user="YUM">
+                <a href="#" onclick="showSection('PomPom')">
+                    <img src="PomPom.png" alt="Odelay">
+                    <span>Pom Pom<br>Ariel Pink<br>2014</span>
                 </a>
             </div>
             <div class="nav-item" data-album="Post" data-artist="Bjork" data-year="1995" data-score-user="DELISH" data-score-partner="PERFETTO">
@@ -1645,6 +1663,12 @@
                 <a href="#" onclick="showSection('Summerteeth')">
                     <img src="Summerteeth.png" alt="SoftBulletin">
                     <span>Summerteeth<br>Wilco<br>1999</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Talkie Walkie" data-artist="Air" data-year="2004" data-score-partner="SNACK">
+                <a href="#" onclick="showSection('WalkieTalkie')">
+                    <img src="WalkieTalkie.png" alt="SoftBulletin">
+                    <span>Talkie Walkie<br>Air<br>2004</span>
                 </a>
             </div>
             <div class="nav-item" data-album="Tango In The Night" data-artist="Fleetwood Mac" data-year="1987" data-score-user="DELISH">
@@ -1876,6 +1900,28 @@
     
 
     <!-- Sections -->
+
+    <section id="DeMarco">
+        <div class="section-content">
+            <h2 class="album-title">
+                2<br>
+                Mac DeMarco, 2012<br>
+                Indie Rock, Soft
+            </h2>
+            <img src="DeMarco.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★">
+                <img src="YUM.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+        </div>
+    </section>
+
     <section id="Agaetis">
         <div class="section-content">
             <h2>Ágætis byrjun</h2>
@@ -2057,6 +2103,26 @@
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Smerz">
+        <div class="section-content">
+            <h2 class="album-title">
+                Big City Life<br>
+                Smerz, 2025
+            </h2>
+            <p>Dream Pop, Techno, Experimental</p>
+            <img src="Smerz.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
             </div>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
@@ -2283,6 +2349,26 @@
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="DearScience">
+        <div class="section-content">
+            <h2 class="album-title">
+                Dear Science<br>
+                TV On The Radio, 2008
+            </h2>
+            <p>Art Rock, Post-Punk, Funk</p>
+            <img src="DearScience.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★">
+                <img src="DELISH.png"  alt="★"> 
             </div>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
@@ -3095,9 +3181,9 @@
         <div class="section-content">
             <h2 class="album-title">
                 Moon Safari<br>
-                Air, 1998
+                Air, 1998<br>
+                Trip-Hop, Electronic, Soft Rock
             </h2>
-            <p>Trip-Hop, Electronic</p>
             <img src="MoonSafari.png" alt="Agaetis Image">
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
@@ -3106,7 +3192,7 @@
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
-                <img src="YUM.png"  alt="★">
+                <img src="DELISH.png"  alt="★">
             </div>
             <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
@@ -3318,6 +3404,26 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="PomPom">
+        <div class="section-content">
+            <h2 class="album-title">
+                Pom Pom<br>
+                Ariel Pink, 2014<br>
+                Psychedelic Pop, Art Rock
+            </h2>
+            <img src="PomPom.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
             </div>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
@@ -3769,6 +3875,26 @@
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
+    <section id="WalkieTalkie">
+        <div class="section-content">
+            <h2 class="album-title">
+                Talkie Walkie<br>
+                Air, 2004<br>
+                Downtempo, Space Pop, Ambient
+            </h2>
+            <img src="WalkieTalkie.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+                <img src="Snack.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
     <section id="TeenDream">
         <div class="section-content">
             <h2 class="album-title">
@@ -3910,6 +4036,8 @@
             </div>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
+
+    
 
     <section id="WeLoveYou">
         <div class="section-content">

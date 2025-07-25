@@ -55,6 +55,29 @@
             color: #8a1d52;                  /* Text turns red on hover */
         }
 
+        .showcase-item {
+            text-align: center;          /* Center the text inside the nav */
+            margin: 0;
+        }
+
+        .showcase-item img {
+            width: 150px;
+            height: 150px;
+            transition: opacity 0.3s ease; /* Smooth hover effect */
+        }
+
+        .showcase-item span {
+            display: block;              /* Make the text appear below the image */
+            font-size: 18px;             /* Font size for the text */
+            color: white;                /* Default text color */
+            font-family: "Josefin Sans", sans-serif; /* 'Roboto' font for the text */
+            font-weight: 700;            /* Make the text bold */
+            transition: color 0.3s;      /* Smooth transition for color change */
+            position: relative;
+            left: 280px;
+            top: -95px;
+        }
+
         /* Basic styling for the navigation bar */
         .nav-container {
             display: grid;
@@ -150,6 +173,19 @@
         .score img{
             width:100px;
             height:100px;                /* keep a square aspect ratio */
+        }
+
+        .logo{
+            display:flex;               /* show stars in a row */
+            justify-content: center; 
+            gap:0.35rem;                /* little breathing‑room between icons */
+            margin-top:1rem;            /* space above row of stars */
+        }
+
+        /* shrink stars (or digit images) to suit */
+        .logo img{
+            width:200px;
+            height:200px;                /* keep a square aspect ratio */
         }
 
         .section-content div {
@@ -257,6 +293,23 @@
             background-color: #8a1d52;        /* Change background color on hover */
         }
 
+        .top-bar .home-button4 {
+            background-color: black;          /* Black background */
+            color: white;                     /* White text */
+            border: 1px solid black;          /* White border */
+            padding: 10px 20px;                /* Padding around the button */
+            font-size: 16px;                   /* Font size for the button */
+            cursor: pointer;                  /* Pointer cursor on hover */
+            position: relative;
+            left: 0px;
+        }
+        
+
+        /* Hover effect for the back button */
+        .top-bar .home-button4:hover {
+            background-color: #8a1d52;        /* Change background color on hover */
+        }
+
         /* Back button styling inside the top bar */
         .top-bar .nav-button {
             background-color: black;          /* Black background */
@@ -280,25 +333,67 @@
     <div class="top-bar">
         <button class="nav-button" onclick="goToWelcome()">Home</button>
         <button class="home-button" onclick="goToNavbar()">Reviews</button>
-        <button class="home-button2" onclick="goToHome()">RobKnife's Top 100</button>
-        <button class="home-button3" onclick="goToJoint()">Joint Best Albums</button>
+        <button class="home-button2" onclick="goToDelicacy()">PetyaSpoon's Monthly Delicacy</button>
+        <button class="home-button3" onclick="goToHome()">RobKnife's Top 100</button>
+        <button class="home-button4" onclick="goToJoint()">Joint Best Albums</button>
     </div>
 
+    <section id="Month" class="section">
+        <h1 class="album-title">PetyaSpoon's Monthly Delicacy</h1>
+        <div class="nav-item" data-album="Headlights" data-artist="Alex G" data-year="2025">
+            <a href="#" onclick="showSection('Headlights')">
+                <img src="HeadlightsJuly.png" alt="SoftBulletin">
+                <span>Headlights<br>Alex G<br>2025</span>
+            </a>
+        </div>
+        
+        
+        
+    </section>
+
     <section id="welcome" class="section">
-        <h1>Epic music website recording the reviews of Rob "RobKnife" Smith and Peter "PetyaSpoon" Havacs!</h1>
-        <h1>Ahhh FINALLY! A music critic I can agree with...</h1>
-        <img src="RobKnife.png" alt="Wutang">
-        <img src="PetyaSpoon.png" alt="Wutang">
-        <p>We rank based on the following 7 categories:<br>Perfetto!: A 10/10 album<br>Delish: One of our favourite albums<br>Yum: Banger album<br>Snack: Enjoyable album<br>K.: We have mixed feelings<br>Eww: We dislike this album<br>BLEH: We hate this album</p>
-        <div class="score">
+        <h1 class="album-title">Epic music website recording the reviews of Rob "RobKnife" Smith and Peter "PetyaSpoon" Havacs!</h1>
+        <h1 class="album-title">Ahhh FINALLY! A music critic I can agree with...</h1>
+        <div class="logo">
+            <img src="RobKnife.png" alt="Wutang">
+            <img src="PetyaSpoon.png" alt="Wutang">
+        </div>
+        
+        <h2 class="album-title">We rank based on the following 7 categories:</h2>
+        <div class="showcase-item">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="Perfetto.png" alt="Wutang">
+            <span>A 10/10 album</span>
+        </div>
+        <div class="showcase-item">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="DELISH.png" alt="Wutang">
+            <span>One of our favourite albums</span>
+        </div>
+        <div class="showcase-item">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="YUM.png" alt="Wutang">
+            <span>Banger album</span>
+        </div>
+        <div class="showcase-item">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="Snack.png" alt="Wutang">
+            <span>Enjoyable album</span>
+        </div>
+        <div class="showcase-item">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="K.png" alt="Wutang">
+            <span>Mixed feelings</span>
+        </div>
+        <div class="showcase-item">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="Eww.png" alt="Wutang">
+            <span>We dislike this album</span>
+        </div>
+        <div class="showcase-item">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
             <img src="BLEH.png" alt="Wutang">
+            <span>We hate this album</span>
         </div>
     </section>
     <section id="joint">
@@ -326,6 +421,42 @@
                 <a href="#" onclick="showSection('YHF')">
                     <img src="YHF.png" alt="YHF">
                     <span>4. Yankee Hotel Foxtrot<br>Wilco<br>2002</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Post')">
+                    <img src="Post.png" alt="YHF">
+                    <span>5. Post<br>Björk<br>1995</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Homo')">
+                    <img src="Homo.png" alt="YHF">
+                    <span>6. Homogenic<br>Björk<br>1997</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Since')">
+                    <img src="Since.png" alt="YHF">
+                    <span>7. Since I Left You<br>The Avalanches<br>2000</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('KidA')">
+                    <img src="KidA.png" alt="YHF">
+                    <span>8. Kid A<br>Radiohead<br>2000</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('Interpol')">
+                    <img src="Interpol.png" alt="YHF">
+                    <span>9. Turn On The Bright Lights<br>Interpol<br>2002</span>
+                </a>
+            </div>
+            <div class="rank-item">
+                <a href="#" onclick="showSection('UnknownPleasures')">
+                    <img src="UnknownPleasures.png" alt="YHF">
+                    <span>10. Unknown Pleasures<br>Joy Division<br>1979</span>
                 </a>
             </div>
         </div>
@@ -784,113 +915,131 @@
                     <span>63. Unknown Pleasures<br>Joy Division<br>1979</span>
                 </a>
             </div>
+            <div class="rank-item" data-album="Nevermind" data-artist="Nirvana" data-year="1991" data-score-user="DELISH">
+                <a href="#" onclick="showSection('Nevermind')">
+                    <img src="Nevermind.png" alt="MPP">
+                    <span>64. Nevermind<br>Nirvana<br>1991</span>
+                </a>
+            </div>
             <div class="rank-item" data-album="Mezzanine" data-artist="Massive Attack" data-year="1998" data-score-user="DELISH">
                 <a href="#" onclick="showSection('Mezzanine')">
                     <img src="Mezzanine.png" alt="MPP">
-                    <span>64. Mezzanine<br>Massive Attack<br>1998</span>
+                    <span>65. Mezzanine<br>Massive Attack<br>1998</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Strange Mercy" data-artist="St. Vincent" data-year="2011" data-score-user="DELISH">
                 <a href="#" onclick="showSection('StrangeMercy')">
                     <img src="StrangeMercy.png" alt="SoftBulletin">
-                    <span>65. Strange Mercy<br>St. Vincent<br>2011</span>
+                    <span>66. Strange Mercy<br>St. Vincent<br>2011</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Sound of silver" data-artist="LCD Soundsystem" data-year="2007" data-score-user="DELISH">
                 <a href="#" onclick="showSection('Silver')">
                     <img src="Silver.png" alt="SoftBulletin">
-                    <span>66. Sound Of Silver<br>LCD Soundsystem<br>2007</span>
+                    <span>67. Sound Of Silver<br>LCD Soundsystem<br>2007</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Reflektor" data-artist="Arcade Fire" data-year="2013" data-score-user="YUM" data-score-partner="PERFETTO">
                 <a href="#" onclick="showSection('Reflektor')">
                     <img src="Reflektor.png" alt="SoftBulletin">
-                    <span>67. Reflektor<br>Arcade Fire<br>2013</span>
+                    <span>68. Reflektor<br>Arcade Fire<br>2013</span>
                 </a>
             </div>
             <div class="rank-item" data-album="BRAT" data-artist="Charli XCX" data-year="2024">
                 <a href="#" onclick="showSection('BRAT')">
                     <img src="BRAT.png" alt="BRAT">
-                    <span>68. BRAT<br>Charli XCX<br>2024</span>
+                    <span>69. BRAT<br>Charli XCX<br>2024</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Discovery" data-artist="Daft Punk" data-year="2001" data-score-user="YUM" data-score-partner="YUM">
                 <a href="#" onclick="showSection('Discovery')">
                     <img src="Discovery.png" alt="Doolittle">
-                    <span>69. Discovery<br>Daft Punk<br>2001</span>
+                    <span>70. Discovery<br>Daft Punk<br>2001</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Abbey Road" data-artist="The Beatles" data-year="1969">
                 <a href="#" onclick="showSection('AbbeyRoad')">
                     <img src="Abbey.png" alt="Abbey">
-                    <span>70. Abbey Road<br>The Beatles<br>1969</span>
+                    <span>71. Abbey Road<br>The Beatles<br>1969</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Run The Jewels" data-year="2013" data-score-user="YUM">
                 <a href="#" onclick="showSection('RTJ')">
                     <img src="RTJ.png" alt="SoftBulletin">
-                    <span>71. Run The Jewels<br>Run The Jewels<br>2013</span>
+                    <span>72. Run The Jewels<br>Run The Jewels<br>2013</span>
                 </a>
             </div>
             <div class="rank-item" data-artist="St. Vincent" data-year="2014" data-score-user="YUM">
                 <a href="#" onclick="showSection('Vincent')">
                     <img src="Vincent.png" alt="SoftBulletin">
-                    <span>72. St. Vincent<br>St. Vincent<br>2014</span>
+                    <span>73. St. Vincent<br>St. Vincent<br>2014</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Melodrama" data-artist="Lorde" data-year="2017" data-score-user="YUM">
                 <a href="#" onclick="showSection('Melodrama')">
                     <img src="Melodrama.png" alt="MPP">
-                    <span>73. Melodrama<br>Lorde<br>2017</span>
+                    <span>74. Melodrama<br>Lorde<br>2017</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Teen Dream" data-artist="Beach House" data-year="2010" data-score-user="YUM">
                 <a href="#" onclick="showSection('TeenDream')">
                     <img src="TeenDream.png" alt="SoftBulletin">
-                    <span>74. Teen Dream<br>Beach House<br>2010</span>
+                    <span>75. Teen Dream<br>Beach House<br>2010</span>
+                </a>
+            </div>
+            <div class="rank-item" data-album="Fleet Foxes" data-artist="Fleet Foxes" data-year="2008" data-score-user="YUM">
+                <a href="#" onclick="showSection('FleetFoxes')">
+                    <img src="FleetFoxes.png" alt="FetchBoltCutters">
+                    <span>76. Fleet Foxes<br>Fleet Foxes<br>2008</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Golden Hour" data-artist="Kacey Musgraves" data-year="2018">
                 <a href="#" onclick="showSection('GoldenHour')">
                     <img src="GoldenHour.png" alt="GoldenHour">
-                    <span>75. Golden Hour<br>Kacey Musgraves<br>2018</span>
+                    <span>77. Golden Hour<br>Kacey Musgraves<br>2018</span>
                 </a>
             </div> 
             <div class="rank-item" data-album="Bon Iver, Bon Iver" data-year="2011">
                 <a href="#" onclick="showSection('BonIver')">
                     <img src="BonIver.png" alt="BonIver">
-                    <span>76. Bon Iver, Bon Iver<br>Bon Iver<br>2011</span>
+                    <span>78. Bon Iver, Bon Iver<br>Bon Iver<br>2011</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Plastic Beach" data-artist="Gorillaz" data-year="2010" data-score-user="YUM" data-score-partner="YUM">
                 <a href="#" onclick="showSection('Plastic')">
                     <img src="Plastic.png" alt="Odelay">
-                    <span>77. Plastic Beach<br>Gorillaz<br>2010</span>
+                    <span>79. Plastic Beach<br>Gorillaz<br>2010</span>
                 </a>
             </div>
             
             <div class="rank-item" data-album="Blonde", data-artist="Frank Ocean" data-year="2016" data-score-user="YUM">
                 <a href="#" onclick="showSection('Blonde')">
                     <img src="Blonde.png" alt="BonIver">
-                    <span>78. Blonde<br>Frank Ocean<br>2016</span>
+                    <span>80. Blonde<br>Frank Ocean<br>2016</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Settle" data-artist="Disclosure" data-year="2013" data-score-user="YUM">
                 <a href="#" onclick="showSection('Settle')">
                     <img src="Settle.png" alt="SoftBulletin">
-                    <span>79. Settle<br>Disclosure<br>2013</span>
+                    <span>81. Settle<br>Disclosure<br>2013</span>
                 </a>
             </div>
             <div class="rank-item" data-album="The OOZ" data-artist="King Krule" data-year="2017" data-score-user="YUM" data-score-partner="PERFETTO">
                 <a href="#" onclick="showSection('OOZ')">
                     <img src="OOZ.png" alt="Odelay">
-                    <span>80. The OOZ<br>King Krule<br>2017</span>
+                    <span>82. The OOZ<br>King Krule<br>2017</span>
+                </a>
+            </div>
+            <div class="rank-item" data-album="Pom Pom" data-artist="Ariel Pink" data-year="2014" data-score-user="YUM" data-score-partner="SNACK">
+                <a href="#" onclick="showSection('PomPom')">
+                    <img src="PomPom.png" alt="Odelay">
+                    <span>83. Pom Pom<br>Ariel Pink<br>2014</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Back To Black" data-artist="Amy Winehouse" data-year="2006" data-score-user="YUM" data-score-partner="YUM">
                 <a href="#" onclick="showSection('Amy')">
                     <img src="Amy.png" alt="BonIver">
-                    <span>81. Back To Black<br>Amy Winehouse<br>2006</span>
+                    <span>84. Back To Black<br>Amy Winehouse<br>2006</span>
                 </a>
             </div>
             
@@ -1293,6 +1442,12 @@
                     <span>Fetch The Bolt Cutters<br>Fiona Apple<br>2020</span>
                 </a>
             </div>
+            <div class="nav-item" data-album="Fleet Foxes" data-artist="Fleet Foxes" data-year="2008" data-score-user="YUM">
+                <a href="#" onclick="showSection('FleetFoxes')">
+                    <img src="FleetFoxes.png" alt="FetchBoltCutters">
+                    <span>Fleet Foxes<br>Fleet Foxes<br>2008</span>
+                </a>
+            </div>
             <div class="nav-item" data-album="Franz Ferdinand" data-artist="Franz Ferdinand" data-year="2004" data-score-user="DELISH" data-score-partner="YUM">
                 <a href="#" onclick="showSection('Franz')">
                     <img src="Franz.png" alt="FetchBoltCutters">
@@ -1489,6 +1644,12 @@
                 <a href="#" onclick="showSection('MBDTF')">
                     <img src="MBDTF.png" alt="MPP">
                     <span>My Beautiful Dark Twisted Fantasy<br>Kanye West<br>2010</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Nevermind" data-artist="Nirvana" data-year="1991" data-score-user="DELISH">
+                <a href="#" onclick="showSection('Nevermind')">
+                    <img src="Nevermind.png" alt="MPP">
+                    <span>Nevermind<br>Nirvana<br>1991</span>
                 </a>
             </div>
             <div class="nav-item" data-album="Norman Fucking Rockwell!" data-artist="Lana Del Rey" data-year="2019" data-score-user="YUM" data-score-partner="YUM">
@@ -2563,6 +2724,26 @@
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
+    <section id="FleetFoxes">
+        <div class="section-content">
+            <h2 class="album-title">
+                Fleet Foxes<br>
+                Fleet Foxes, 2008
+            </h2>
+            <p>Indie, Folk, Rock</p>
+            <img src="FleetFoxes.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
     <section id="Franz">
         <div class="section-content">
             <h2 class="album-title">
@@ -3244,6 +3425,27 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="YUM.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+        </div>
+    </section>
+
+    <section id="Nevermind">
+        <div class="section-content">
+            <h2 class="album-title">
+                Nevermind<br>
+                Nirvana, 1991<br>
+                Grunge, Rock
+            </h2>
+            <img src="Nevermind.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
             </div>
             <button class="button" onclick="goBack()">Back to Reviews</button>
         </div>
@@ -4167,6 +4369,9 @@
         }
         function goToWelcome() {
             showSection('welcome');
+        }
+        function goToDelicacy() {
+            showSection('Month');
         }
         function goToJoint() {
             showSection('joint');

@@ -383,7 +383,6 @@
         <button class="home-button2" onclick="goToDelicacy()">PetyaSpoon's Monthly Delicacy</button>
         <button class="home-button3" onclick="goToHome()">RobKnife's Top 100</button>
         <button class="home-button4" onclick="goToJoint()">Joint Best Albums</button>
-        <button class="home-button5" onclick="goToWorst()">Joint Worst Albums</button>
     </div>
 
     <section id="Month" class="section">
@@ -515,23 +514,7 @@
             </div>
         </div>
     </section>
-    <section id="Worst">
-        <div class="rank-container">
-            <h2>Combined Worst Albums</h2>
-            <div class="rank-item">
-                <a href="#" onclick="showSection('KillMe')">
-                    <img src="KillMe.png" alt="MPP">
-                    <span>1. -<br>Ed Sheeran<br>2023</span>
-                </a>
-            </div>
-            <div class="rank-item">
-                <a href="#" onclick="showSection('SadBoy')">
-                    <img src="SadBoy.png" alt="MPP">
-                    <span>2. Best Day Of My Life<br>Tom Odell<br>2022</span>
-                </a>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Home Section -->
     <section id="home">
@@ -702,6 +685,12 @@
                 <a href="#" onclick="showSection('Prince')">
                     <img src="Prince.png" alt="Animals">
                     <span>16. Purple Rain<br>Prince<br>1984</span>
+                </a>
+            </div>
+            <div class="rank-item" data-album="Innervisions" data-artist="Stevie Wonder" data-year="1973">
+                <a href="#" onclick="showSection('Innervisions')">
+                    <img src="Innervisions.png" alt="Animals">
+                    <span>17. Innervisions<br>Stevie Wonder<br>1973</span>
                 </a>
             </div>
             <div class="rank-item" data-album="Our Favourite Shop" data-artist="The Style Council" data-year="1985">
@@ -1352,6 +1341,12 @@
                     <span>Animals<br>Pink Floyd<br>1977</span>
                 </a>
             </div>
+            <div class="nav-item" data-album="Art Angels" data-artist="Grimes" data-year="2015" data-score-user="DELISH">
+                <a href="#" onclick="showSection('ArtAngels')">
+                    <img src="ArtAngels.png" alt="Animals">
+                    <span>Art Angels<br>Grimes<br>2015</span>
+                </a>
+            </div>
             <div class="nav-item" data-album="Astroworld" data-artist="Travis Scott" data-year="2018" data-score-user="YUM">
                 <a href="#" onclick="showSection('Astroworld')">
                     <img src="Astroworld.png" alt="Animals">
@@ -1428,6 +1423,12 @@
                 <a href="#" onclick="showSection('BRAT')">
                     <img src="BRAT.png" alt="BRAT">
                     <span>BRAT<br>Charli XCX<br>2024</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Balloon" data-artist="De La Soul" data-year="1993" data-score-user="DELISH">
+                <a href="#" onclick="showSection('Balloon')">
+                    <img src="Balloon.png" alt="BRAT">
+                    <span>Buhloone Mindstate<br>De La Soul<br>1993</span>
                 </a>
             </div>
             <div class="nav-item" data-album="Channel Orange" data-artist="Frank Ocean" data-year="2012" data-score-user="DELISH">
@@ -1538,6 +1539,12 @@
                     <span>Funeral<br>Arcade Fire<br>2004</span>
                 </a>
             </div>
+            <div class="nav-item" data-album="Getting Killed" data-artist="Geese" data-year="2025" data-score-user="YUM">
+                <a href="#" onclick="showSection('Geese')">
+                    <img src="Geese.png" alt="GoldenHour">
+                    <span>Getting Killed<br>Geese<br>2025</span>
+                </a>
+            </div>
             <div class="nav-item" data-album="Golden Hour" data-artist="Kacey Musgraves" data-year="2018" data-score-user="YUM">
                 <a href="#" onclick="showSection('GoldenHour')">
                     <img src="GoldenHour.png" alt="GoldenHour">
@@ -1596,6 +1603,12 @@
                 <a href="#" onclick="showSection('Illmatic')">
                     <img src="illmatic.png" alt="Grace">
                     <span>Illmatic<br>Nas<br>1994</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Innervisions" data-artist="Stevie Wonder" data-year="1973" data-score-user="PERFETTO">
+                <a href="#" onclick="showSection('Innervisions')">
+                    <img src="Innervisions.png" alt="Animals">
+                    <span>Innervisions<br>Stevie Wonder<br>1973</span>
                 </a>
             </div>
             <div class="nav-item" data-album="In Colour" data-artist="Jamie xx" data-year="2015" data-score-user="YUM" data-score-partner="YUM">
@@ -1658,7 +1671,7 @@
                         <span>London Calling<br>The Clash<br>1979</span>
                     </a>
             </div>
-            <div class="nav-item" data-album="Loveless" data-artist="My Bloody Valentine" data-year="1991" data-score-partner="PERFETTO">
+            <div class="nav-item" data-album="Loveless" data-artist="My Bloody Valentine" data-year="1991" data-score-user="DELISH" data-score-partner="PERFETTO">
                 <a href="#" onclick="showSection('Loveless')">
                     <img src="Loveless.png" alt="Grace">
                     <span>Loveless<br>My Bloody Valentine<br>1991</span>
@@ -1674,6 +1687,12 @@
                 <a href="#" onclick="showSection('Madvillainy')">
                     <img src="Madvillainy.png" alt="MPP">
                     <span>Madvillainy<br>Madvillain<br>2004</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Maggot Brain" data-artist="Funkadelic" data-year="1971" data-score-user="PERFETTO">
+                <a href="#" onclick="showSection('Funk')">
+                    <img src="Funk.png" alt="MPP">
+                    <span>Maggot Brain<br>Funkadelic<br>1971</span>
                 </a>
             </div>
             <div class="nav-item" data-album="Melodrama" data-artist="Lorde" data-year="2017" data-score-user="YUM">
@@ -1808,6 +1827,12 @@
                     <span>The Queen Is Dead<br>The Smiths<br>1986</span>
                 </a>
             </div>
+            <div class="nav-item" data-album="Ready To Die" data-artist="Notorious B.I.G." data-year="1994" data-score-user="PERFETTO">
+                <a href="#" onclick="showSection('ReadyDie')">
+                    <img src="ReadyDie.png" alt="SoftBulletin">
+                    <span>Ready To Die<br>Notorious B.I.G.<br>1994</span>
+                </a>
+            </div>
             <div class="nav-item" data-album="Reflektor" data-artist="Arcade Fire" data-year="2013" data-score-user="YUM" data-score-partner="PERFETTO">
                 <a href="#" onclick="showSection('Reflektor')">
                     <img src="Reflektor.png" alt="SoftBulletin">
@@ -1938,6 +1963,12 @@
                 <a href="#" onclick="showSection('ThisHappening')">
                     <img src="ThisHappening.png" alt="SoftBulletin">
                     <span>This Is Happening<br>LCD Soundsystem<br>2010</span>
+                </a>
+            </div>
+            <div class="nav-item" data-album="Thriller" data-artist="Michael Jackson" data-year="1982" data-score-user="DELISH">
+                <a href="#" onclick="showSection('Thriller')">
+                    <img src="Thriller.png" alt="SoftBulletin">
+                    <span>Thriller<br>Michael Jackson<br>1982</span>
                 </a>
             </div>
             <div class="nav-item" data-album="To Pimp A Butterfly" data-artist="Kendrick Lamar" data-year="2015" data-score-user="DELISH">
@@ -2255,6 +2286,26 @@
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
+    <section id="ArtAngels">
+        <div class="section-content">
+            <h2 class="album-title">
+                Art Angels<br>
+                Grimes, 2015<br>
+                Electro-pop
+            </h2>
+            <img src="ArtAngels.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
     <section id="Astroworld">
         <div class="section-content">
             <h2 class="album-title">
@@ -2272,9 +2323,6 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
-            <p>Very popular hip-hop album with a vast, although un-credited on spotify, list of features.</p>
-            <h2>Rob's take:</h2>
-            <p>Fun album with many bops and clean production.<br>Fav songs: COFFEE BEAN, STARGAZING, CAN'T SAY</p>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
@@ -2518,6 +2566,26 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
                 <img src="Perfetto.png"  alt="★">
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Balloon">
+        <div class="section-content">
+            <h2 class="album-title">
+                Buhloone Mindstate<br>
+                De La Soul, 1993
+            </h2>
+            <p>Hip-Hop</p>
+            <img src="Balloon.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
             </div>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
@@ -2893,11 +2961,31 @@
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
+    <section id="Geese">
+        <div class="section-content">
+            <h2 class="album-title">
+                Getting Killed<br>
+                Geese, 2025
+            </h2>
+            <p>Indie Rock</p>
+            <img src="Geese.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="YUM.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
     <section id="GoldenHour">
         <div class="section-content">
             <h2 class="album-title">
                 Golden Hour<br>
-                Kacey Musgraves
+                Kacey Musgraves, 2018
             </h2>
             <p>Country Pop</p>
             <img src="GoldenHour.png" alt="Agaetis Image">
@@ -3093,6 +3181,27 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="PetyaSpoon.png"  alt="★"> 
             </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
+    <section id="Innervisions">
+        <div class="section-content">
+            <h2 class="album-title">
+                Innervisions<br>
+                Stevie Wonder, 1973
+            </h2>
+            <p>Funk, Soul</p>
+            <img src="Innervisions.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <p>Songs in the key of life's funky older brother</p>
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
@@ -3313,6 +3422,7 @@
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★"> 
             </div>
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
@@ -3355,6 +3465,27 @@
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
                 <img src="RobKnife.png"  alt="★"> 
                 <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+        </div>
+    </section>
+
+    <section id="Funk">
+        <div class="section-content">
+            <h2 class="album-title">
+                Maggot Brain<br>
+                Funkadelic, 1971
+            </h2>
+            <p>Funk</p>
+            <img src="Funk.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png"  alt="★">
             </div>
             <div class="score">
         <!-- Example: a “4.5 / 5” rating shown with star icons -->
@@ -3832,6 +3963,26 @@
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
+    <section id="ReadyDie">
+        <div class="section-content">
+            <h2 class="album-title">
+                Ready To Die<br>
+                Notorious B.I.G.
+            </h2>
+            <p>Rap</p>
+            <img src="ReadyDie.png">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="Perfetto.png">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
     <section id="Reflektor">
         <div class="section-content">
             <h2 class="album-title">
@@ -4278,6 +4429,26 @@
             <button class="button" onclick="goBack()">Back to Reviews</button>
     </section>
 
+    <section id="Thriller">
+        <div class="section-content">
+            <h2 class="album-title">
+                Thriller<br>
+                Michael Jackson, 1982
+            </h2>
+            <p>Pop</p>
+            <img src="Thriller.png" alt="Agaetis Image">
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="RobKnife.png"  alt="★"> 
+                <img src="DELISH.png"  alt="★">
+            </div>
+            <div class="score">
+        <!-- Example: a “4.5 / 5” rating shown with star icons -->
+                <img src="PetyaSpoon.png"  alt="★"> 
+            </div>
+            <button class="button" onclick="goBack()">Back to Reviews</button>
+    </section>
+
     <section id="TPAB">
         <div class="section-content">
             <h2 class="album-title">
@@ -4513,10 +4684,6 @@
         // Go to the navbar from home
         function goToNavbar() {
             showSection('albums');
-        }
-
-        function goToWorst() {
-            showSection('Worst');
         }
 
         // Go back to the home section
